@@ -2,19 +2,33 @@
 body { 
 	padding: 0;
 	margin: 0;
-	overflow-x: hidden 
+	background-color: rgba(44,58,79,1);
+	font-family: 'Helvetica','微軟正黑體';
+	font-weight: 300;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+body:after {
+	content: "";
+	position: fixed;
+	background-color: rgba(44,58,79,.9);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
 }
 ::-moz-selection {
-    background: #ff0464;
+    background: #F9BCA7;
     color: #fff;
 }
 ::selection {
-    background: #ff0464;
+    background: #F9BCA7;
     color: #fff;
 }
 a {
 	text-decoration: none;
-	color: #ff0464;
+	color: #F9BCA7;
 	display: inline-block;
 	position: relative;
 }
@@ -27,34 +41,63 @@ ul {
 	height: 100vh;
 	background-image: url(../../images/web-texture-01.png);
 	background-repeat: no-repeat;
-	background-position: center 45%;
+	background-position: 70% center;
 	display: block;
 	margin: 0;
+	position: relative;
+	z-index: 3;
 }
 .nav{
 	position: fixed;
-	top: 50px;
-	left: 60px;
+	top: 70px;
+	left: 71px;
 	z-index: 99
 }
 	.nav-btn {
-		border: 1px solid #ff0464;
+		/*border: 1px solid #F9BCA7;*/
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
-		width: 50px;
-		height: 50px;
+		width: 28px;
+		height: 15px;
 		padding: 10px;
 		cursor: pointer;
+		position: relative;
+		
 	}
-	.nav-line {
-		height: 1px;
+	.nav-btn:before,.nav-btn:after{
+		transform: rotate(0deg);
+		transition: transform .3s;
+	}
+	.nav-btn.active {
+		margin: 0;
+	}
+	.nav-btn.active:after {
+		transform: rotate(45deg);
+		margin-top: 7px;
+	}
+	.nav-btn.active:before {
+		transform: rotate(-45deg);
+		margin-top: 7px;
+	}
+	.nav-btn:after,.nav-btn:before {
+		content: "";
+		position: absolute;
+		height: 2px;
 		width: 100%;
-		margin: 7px 0;
-		background-color: #ff0464;
+		left: 0;
+		z-index: 2;
+		background-color: #F9BCA7;
 	}
+	.nav-btn:before {
+		margin-top: 0px;
+	}
+	.nav-btn:after {
+		margin-top: 15px;
+	}
+
 	.nav-menu {
-		color: #ff0464;
+		color: #F9BCA7;
 		font-size: 24px;
 		line-height: 2.5;
 		height: 0;
@@ -83,7 +126,7 @@ ul {
 	}
 
 	.nav-item:hover a:after{
-		background-color: #ff0464;
+		background-color: #F9BCA7;
 		width: 100%;
 	}
 	section {
@@ -92,13 +135,13 @@ ul {
 	.content-wrap {
 		position: absolute;
 		top: 17vh;
-		left: 20vw;
+		left: 25vw;
 		clear: both;
 	}
 	.pull-right { float: right;}
 	.pull-left { float: left;}
 	.btn {
-		border: 1px solid #ff0464;
+		border: 1px solid #F9BCA7;
 		padding: 5px 50px;
 		-webkit-transition: .5s;
 		   -moz-transition: .5s;
@@ -106,41 +149,38 @@ ul {
 				transition: .5s;
 	}
 	.btn:hover {
-		background-color: #ff0464;
-		color: #fff;
+		background-color: #F9BCA7;
+		color: rgba(44,58,79,.9);
 		box-shadow: 0px 2px 5px rgba(100,0,62,.5);
 	}
-section {
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	-webkit-background-size: 100% auto;
-	background-size: 100% auto;
-	background-position: 0 center;
-	height: 100vh;
-	width: 100vw;
-}
+
 /* index */
-section#index,#anchor1{
+.index{
 	background-image: url(../../images/web-texture-03.png);
 }
 
 /* work */
-section#work,#anchor2{
+.work{
 	background-image: url(../../images/web-texture-04.png);
 }
 .work-list {
-	width: 999999999px;
-	height: 40vh;
+	width: 810px;
+	z-index: 3;
+	position: relative;
+	background: url(../../images/web-texture-08.png) no-repeat;
+	background-position: 0 0;
+	padding-top: 90px;
+	padding-left: 30px;
 
 }
 .work-item {
 	display: inline-block;
 	margin-right: 16px;
 	vertical-align: top;
+	width: 30%;
 
 }
 .work-img {
-	max-height: 400px;
 }
 .work-text{
 	background-color: rgba(255,255,255,.8);
@@ -153,14 +193,19 @@ section#work,#anchor2{
 }
 
 /* profolio */
-section#profile,#anchor3{
+.profile{
 	background-image: url(../../images/web-texture-05.png);
+
 }
 .about-content {
 	margin-left: 70px;
-	color: #ff0464;
+	color: #F9BCA7;
 	position: relative;
+	z-index: 3;
 }
+	.about-content:last-child {
+		margin-left: 0;
+	}
 	.about-title{
 		position: relative;
 		font-size: 16px;
@@ -173,9 +218,9 @@ section#profile,#anchor3{
 		content: "";
 		bottom: -16px;
 		left: 0;
-		height: 6px;
-		width: 100px;
-		background-color: #ff0464;
+		height: 4px;
+		width: 80px;
+		background-color: #F9BCA7;
 	}
 	.about-listitem {
 		font-size: 12px;
@@ -189,7 +234,6 @@ section#profile,#anchor3{
 		margin-left: 55px;
 		margin-top: 10px;
 		letter-spacing: 3px;
-		font-weight: 500;
 		text-transform: uppercase;
 	}
 	
