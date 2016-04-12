@@ -160,7 +160,7 @@ ul {
 }
 
 /* work */
-.work{
+.works{
 	background-image: url(../../images/web-texture-04.png);
 }
 .work-list {
@@ -178,6 +178,7 @@ ul {
 	margin-right: 16px;
 	vertical-align: top;
 	width: 30%;
+	margin-bottom: 16px;
 
 }
 .work-img {

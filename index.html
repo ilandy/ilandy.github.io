@@ -21,19 +21,19 @@
   <!-- <link rel="stylesheet" href="content/stylesheets/phone.css" media="screen and (max-width: 480px)"> --> 
   
 </head>
-<body class="index" ng-app="myApp" ng-controller="myCtrl as m" >
+<body class="index" ng-app="myApp" ng-controller="myCtrl as m" ng-class='m.pageName'>
 	<nav class="nav">
 		<div class="nav-btn" ng-class='{"active":m.isActive}' ng-click="m.isActive=!m.isActive">
 		</div>
 		<ul class="nav-menu" ng-class='{"active":m.isActive}'>
-			<li class="nav-item" data-scroll="index"><a href="" >INDEX</a></li>
-			<li class="nav-item" data-scroll="work"><a href="" >WORKS</a></li>
-			<li class="nav-item" data-scroll="profile"><a href="" >PROFILE</a></li>
+			<li class="nav-item" ng-click="m.pageName='index'"><a href="" >INDEX</a></li>
+			<li class="nav-item" ng-click="m.pageName='works'"><a href="" >WORKS</a></li>
+			<li class="nav-item" ng-click="m.pageName='profile'"><a href="" >PROFILE</a></li>
 		</ul>
 	</nav>
 	
-		<!-- <h1 class="logo"></h1> -->
-		<div class="work">
+		<h1 class="logo" ng-if="m.pageName=='index'"></h1>
+		<div class="work" ng-if="m.pageName=='works'">
 			<div class="content-wrap">
 				<div class="work-scroll">
 					
@@ -52,7 +52,7 @@
 				</ul>
 			</div>
 		</div>
-		<!-- <div class="profile">
+		<div class="profile" ng-if="m.pageName=='profile'">
 			<div class="content-wrap">
 			
 			<div class="about-content pull-right">
@@ -128,7 +128,7 @@
 				<a class="btn" class="text-center" href="https://github.com/ilandy">GITHUB</a>
 			</div>
 			</div>
-		</div> -->
+		</div>
 	
 	<!-- <section id="work" data-target="work" ng-click="a=false">
 		

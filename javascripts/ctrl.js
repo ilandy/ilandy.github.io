@@ -8,5 +8,6 @@
 	function myCtrl(){
 		var vm = this;
 		vm.isActive = false;
+		vm.pageName = 'index'
 	}
 })();
