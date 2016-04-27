@@ -172,6 +172,8 @@ ul {
 /* index */
 .index{
 	background-image: url(../../images/2245508768_3b55099739_b.jpg);
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
 }
 
 /* work */
@@ -179,7 +181,7 @@ ul {
 	background-image: url(../../images/web-texture-04.png);
 }
 	.work > .content-wrap{
-		top: 0% !important;
+		top: 7% !important;
 		transform: translate(-50% , 0%) !important;
 	}
 .work-list {
