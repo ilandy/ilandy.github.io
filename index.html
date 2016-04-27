@@ -21,25 +21,29 @@
   <!-- <link rel="stylesheet" href="content/stylesheets/phone.css" media="screen and (max-width: 480px)"> --> 
   
 </head>
-<body class="index" ng-app="myApp" ng-controller="myCtrl as m" ng-class='m.pageName'>
+<body onresize="console.log(123);getLineTo()" class="index" ng-app="myApp" ng-controller="myCtrl as m" ng-class='m.pageName'>
 	<nav class="nav">
 		<div class="nav-btn" ng-class='{"active":m.isActive}' ng-click="m.isActive=!m.isActive">
 		</div>
 		<ul class="nav-menu" ng-class='{"active":m.isActive}'>
-			<li class="nav-item" ng-click="m.pageName='index'"><a href="" >INDEX</a></li>
-			<li class="nav-item" ng-click="m.pageName='works'"><a href="" >WORKS</a></li>
-			<li class="nav-item" ng-click="m.pageName='profile'"><a href="" >PROFILE</a></li>
+			<li class="nav-item" ng-click="m.pageName='index';m.isActive=!m.isActive"><a href="" >INDEX</a></li>
+			<li class="nav-item" ng-click="m.pageName='works';m.isActive=!m.isActive"><a href="" >WORKS</a></li>
+			<li class="nav-item" ng-click="m.pageName='profile';m.isActive=!m.isActive"><a href="" >PROFILE</a></li>
 		</ul>
 	</nav>
-	
-		<h1 class="logo" ng-if="m.pageName=='index'"></h1>
+		<div class="index" ng-if="m.pageName=='index'">
+			<div class="content-wrap">
+				<h1 class="logo"></h1>
+				
+			</div>
+		</div>
 		<div class="work" ng-if="m.pageName=='works'">
 			<div class="content-wrap">
 				<div class="work-scroll">
 					
 				</div>
 				<ul class="work-list">
-					<li class="work-item mdl-shadow--2dp" ng-repeat="pin in [1,2,3,4,5]">
+					<li class="work-item mdl-shadow--2dp" ng-repeat="pin in [1,2,3,4,5,6,7,8]">
 						<a href="###">
 							<img class="work-img" width="100%%" alt="" src="images/web-texture-07.png">
 							<p class="work-text">
@@ -62,20 +66,21 @@
 						TOOLS
 						<p>
 							ILLUSTRATOR / Sketch <br>
-							PHOTOSHOP</p>
+							PHOTOSHOP <br>
+							Hype</p>
 					</li>
 					<li class="about-listitem">
 						WEB
 						<p>
 							HTML <br>
 							CSS / SASS / COMPASS <br>
-							JQUERY <br>
+							JQUERY / ANGULAR JS<br>
 						</p>
 					</li>
 					<li class="about-listitem">
 						REVISION CONTROL
 						<p>
-							GIT
+							GIT / SOURCE TREE
 						</p>
 					</li>
 					<li class="about-listitem">
@@ -120,7 +125,8 @@
 				</ul>
 			</div>
 			<div class="about-content pull-right">
-				<h3>ABOUT<br>ILANDY CHIU</h3>
+				<img src="images/about.png" alt="">
+				<h3>ILANDY CHIU</h3>
 				<p>
 					JOB - FRONT END DESIGNER <br>
 					Mail - <a href="mailto:w9874123@gmail.com">w9874123@gmail.com</a> 

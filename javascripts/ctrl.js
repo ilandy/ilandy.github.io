@@ -10,4 +10,5 @@
 		vm.isActive = false;
 		vm.pageName = 'index'
 	}
+	
 })();

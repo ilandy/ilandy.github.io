@@ -1,24 +1,27 @@
 (function(){
     angular
-        .module('myApp',['ngSanitize']);    
+        .module('myApp',['ngSanitize']);
+   
+    //jq
+    $(document).ready(function(){
+        var t = "index",
+            moveTo = 0,
+            deviceW = screen.availWidth,
+            logoPosition = $(".logo").offset(),
+            galleryW = 90;
+        getLineTo()
+        $('[data-scroll]').on('click',function(){
+            t = $(this).attr('data-scroll');
+            moveTo = $('#'+t).offset();
+            $('body').animate({
+                scrollTop: moveTo.top
+            },500);
+        });
+    });  
 })();
 
-$(document).ready(function(){
-    var t = "index",
-        moveTo = 0,
-        deviceW = screen.availWidth,
-        galleryW = 90;
-    console.log(deviceW);
-    $('[data-scroll]').on('click',function(){
-        t = $(this).attr('data-scroll');
-        moveTo = $('#'+t).offset();
-        $('body').animate({
-            scrollTop: moveTo.top
-        },500);
-    });
-    // $('#work').swipe( {
-    //     swipeStatus:function(event, phase, direction, distance, duration,fingerCount) {
-    //     $('.work-scroll').text("你用"+fingerCount+"个手指以"+duration+"秒的速度向" + direction + "滑动了" +distance+ "像素 " +"你在"+phase+"中");
-    // }
-    // });
-});
+ function getLineTo(){
+        logoPosition = $(".logo").offset();
+       $("#line1").attr({'x2':logoPosition.left-30,'y2':logoPosition.top-15,'x1':window.innerWidth/10*2,'y1':'0'});
+        $("#line2").attr({'x2':logoPosition.left+380,'y2':logoPosition.top+347,'x1':window.innerWidth/10*8,'y1':window.innerHeight});
+    }
