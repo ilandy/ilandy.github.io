@@ -21,24 +21,24 @@
   <!-- <link rel="stylesheet" href="content/stylesheets/phone.css" media="screen and (max-width: 480px)"> --> 
   
 </head>
-<body onresize="console.log(123);getLineTo()" class="index" ng-app="myApp" ng-controller="myCtrl as m" ng-class='m.pageName'>
+<body class="index" ng-app="myApp" ng-controller="myCtrl as m" ng-class='m.pageName'>
 	<nav class="nav">
 		<div class="nav-btn" ng-class='{"active":m.isActive}' ng-click="m.isActive=!m.isActive">
 		</div>
 		<ul class="nav-menu" ng-class='{"active":m.isActive}'>
-			<li class="nav-item" ng-click="m.pageName='index';m.isActive=!m.isActive"><a href="" >INDEX</a></li>
-			<li class="nav-item" ng-click="m.pageName='works';m.isActive=!m.isActive"><a href="" >WORKS</a></li>
-			<li class="nav-item" ng-click="m.pageName='profile';m.isActive=!m.isActive"><a href="" >PROFILE</a></li>
+			<li class="nav-item" ng-click="m.changePages('index')" ng-class='{"active":m.pageName=="index"}'><a href="" >INDEX</a></li>
+			<li class="nav-item" ng-click="m.changePages('works')" ng-class='{"active":m.pageName=="works"}'><a href="" >WORKS</a></li>
+			<li class="nav-item" ng-click="m.changePages('profile')" ng-class='{"active":m.pageName=="profile"}'><a href="" >PROFILE</a></li>
 		</ul>
 	</nav>
 		<div class="index" ng-if="m.pageName=='index'">
-			<div class="content-wrap">
+			<div class="content-wrap" ng-class='{"blur-it":m.isActive}'>
 				<h1 class="logo"></h1>
 				
 			</div>
 		</div>
 		<div class="work" ng-if="m.pageName=='works'">
-			<div class="content-wrap">
+			<div class="content-wrap" ng-class='{"blur-it":m.isActive}'>
 				<div class="work-scroll">
 					
 				</div>
@@ -57,7 +57,7 @@
 			</div>
 		</div>
 		<div class="profile" ng-if="m.pageName=='profile'">
-			<div class="content-wrap">
+			<div class="content-wrap" ng-class='{"blur-it":m.isActive}'>
 			
 			<div class="about-content pull-right">
 				<h4 class="about-title">SKILL</h4>

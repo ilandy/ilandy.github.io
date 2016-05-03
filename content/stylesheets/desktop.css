@@ -134,6 +134,10 @@ ul {
 			-ms-transition: .5s;
 				transition: .5s;
 	}
+	.nav-item.active a:after {
+		width: 15%;
+		background-color: #F9BCA7;
+	}
 
 	.nav-item:hover a:after{
 		background-color: #F9BCA7;
@@ -148,10 +152,21 @@ ul {
 		left: 50%;
 		clear: both;
 		z-index: 3;
+		-webkit-filter: blur(0px);
+				filter: blur(0px);
 		-webkit-transform: translate(-50%, -50%);
    		   -moz-transform: translate(-50%, -50%);
    		    -ms-transform: translate(-50%, -50%);
    		    	transform: translate(-50%, -50%);
+		animation: enter 1s 1 ease-in; 
+	}
+	@keyframes enter {
+		from { opacity: 0; }
+		to { opacity: 1; }
+	}
+	@keyframes moving {
+		from { padding-top: 20px; }
+		to { padding-top: 0px; }
 	}
 	.pull-right { float: right;}
 	.pull-left { float: left;}
@@ -174,15 +189,18 @@ ul {
 	background-image: url(../../images/2245508768_3b55099739_b.jpg);
 	-webkit-background-size: 100% 100%;
 	background-size: 100% 100%;
+	overflow-y: hidden;
 }
 
 /* work */
 .works{
 	background-image: url(../../images/web-texture-04.png);
+	
 }
 	.work > .content-wrap{
 		top: 7% !important;
 		transform: translate(-50% , 0%) !important;
+		animation: enter 1s 1 ease-in ,moving 1s 1 ease-in;
 	}
 .work-list {
 	width: 60vw;
@@ -226,6 +244,7 @@ ul {
 	.profile > .content-wrap {
 		width: 53vw;
 		min-width: 1017px;
+		animation: enter 1s 1 ease-in, moving 1s 1 ease-in;
 	}
 .about-content {
 	margin-left: 70px;
@@ -266,5 +285,12 @@ ul {
 		letter-spacing: 3px;
 		text-transform: uppercase;
 	}
+
+.blur-it {
+	-webkit-filter: blur(10px);
+			filter: blur(10px);
+	-webkit-transition: filter 10s;
+	transition: filter 10s;
+}
 	
 
