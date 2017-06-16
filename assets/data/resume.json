@@ -1,0 +1,212 @@
+{
+  "basics": {
+    "name": "邱 子繡",
+    "label": ["Front end Designer","UI Designer","Graphic Design"],
+    "picture": "",
+    "email": "w9874123@gmail.com",
+    "phone": "",
+    "website": "https://ilandy.github.io",
+    "github": "https://github.com/ilandy",
+    "birthday": "",
+    "summary": "",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "",
+      "countryCode": "",
+      "region": ""
+    },
+    "profiles": [{
+      "network": "Facebook",
+      "username": "Ilandy Chiu",
+      "url": "https://www.facebook.com/ilandy.chiu"
+    }]
+  },
+  "work": [{
+    "company": "玉山銀行資訊部 (短期實習)",
+    "position": "資訊專員",
+    "website": "https://ebank.esunbank.com.tw/index.jsp",
+    "startDate": "2011-10-01",
+    "endDate": "2011-10-31",
+    "summary": "",
+    "highlights": []
+  },
+  {
+    "company": "日月光半導體資訊部",
+    "position": "SAP 資訊工程師",
+    "website": "http://www.aseglobal.com/ch/",
+    "startDate": "2012-04-01",
+    "endDate": "2014-05-31",
+    "summary": "負責 SAP 財務模組開發 (使用 ABAP 語言) 與 ASP.NET WebForm 應用程式。",
+    "highlights": []
+  },
+  {
+    "company": "大心數位 / 多奇數位股份有限公司",
+    "position": "網頁程式設計師",
+    "website": "http://www.infbeyond.com/",
+    "startDate": "2014-06-01",
+    "endDate": "至今",
+    "summary": "使用 ASP.NET MVC 與 ASP.NET Web API 開發客戶需求的專案，也包含使用 Angular2 的 SPA 專案。",
+    "highlights": []
+  }],
+  "education": [{
+    "institution": "酷奇教育訓練",
+    "area": "軟體開發",
+    "studyType": "",
+    "startDate": "",
+    "endDate": "",
+    "gpa": "",
+    "courses": [
+      "2014-08-16 前端工程訓練：JavaScript 與 TypeScript 開發實戰",
+      "2014-08-17 AngularJS 開發實戰：新手入門篇",
+      "2015-05-31 Entity Framework 6 開發實戰",
+      "2015-08-30 AngularJS 開發實戰：模組開發篇",
+      "2015-10-25 前端工程訓練：npm, bower, yo, gulp, webpack 應用實戰",
+      "2015-12-26 JavaScript 開發實戰：核心概念篇",
+      "2016-04-24 Visual Studio 2015 開發與偵錯技巧",
+      "2016-05-29 JavaScript 開發實戰：核心概念篇",
+      "2016-08-13 Angular2 開發實戰：新手入門",
+      "2016-09-03 ASP.NET Web API 2 開發實戰",
+      "2017-03-26 ASP.NET MVC 5 開發實戰：從入門到進階"
+    ]
+  },
+  {
+    "institution": "SKILLTREE",
+    "area": "軟體開發",
+    "studyType": "",
+    "startDate": "",
+    "endDate": "",
+    "gpa": "",
+    "courses": [
+      "2017-06-10 物件導向實作課程 (使用 C#)"
+    ]
+  }],
+  "projects": [{
+    "name": "嘉義市政府線上陳情系統",
+    "releaseDate": "2017",
+    "website": "http://chiayionline.xinma.com.tw",
+    "summary": "",
+    "highlights": [
+      "UI Design",
+      "HTML",
+      "CSS3",
+      "Angular2"
+    ]
+  },
+  {
+    "name": "高雄市政府線上即時服務平台",
+    "releaseDate": "2016",
+    "website": "https://ia-studio.github.io/kcg-online/",
+    "summary": "",
+    "highlights": [
+      "UI Design",
+      "HTML",
+      "CSS3",
+      "Angular2"
+    ]
+  },
+  {
+    "name": "電影蛋糕社群平台維護",
+    "releaseDate": "2014",
+    "website": "http://www.moviecaker.com",
+    "summary": "",
+    "highlights": [
+      "UI Design",
+      "HTML",
+      "CSS3",
+      "jQuery",
+      "Angular",
+      "Angular2"
+    ]
+  },
+  {
+    "name": "MOPCON 2016 社群志工",
+    "releaseDate": "2016",
+    "website": "http://mopcon.org/2016/",
+    "summary": "",
+    "highlights": [
+      "UI Design",
+      "HTML",
+      "CSS3",
+      "MiddleMan",
+      "jQuery"
+    ]
+  },
+  {
+    "name": "MOPCON 2015 社群志工",
+    "releaseDate": "2015",
+    "website": "http://mopcon.org/2015/",
+    "summary": "",
+    "highlights": [
+      "HTML",
+      "CSS 3",
+      "MiddleMan",
+      "jQuery"
+    ]
+  },
+  {
+    "name": "柏緯鐵工公司形象官網",
+    "releaseDate": "2014",
+    "website": "http://bothwell.com.tw",
+    "summary": "",
+    "highlights": [
+      "UI Design",
+      "HTML",
+      "CSS 3",
+      "jQuery"
+    ]
+  }],
+  "skills": [{
+    "name": "ASP.NET MVC & Web API",
+    "score": 80,
+    "level": "熟悉"
+  },
+  {
+    "name": "Entity Framework & LINQ",
+    "score": 75,
+    "level": "熟悉"
+  },
+  {
+    "name": "JavaScript",
+    "score": 75,
+    "level": "熟悉"
+  },
+  {
+    "name": "HTML & CSS",
+    "score": 65,
+    "level": "中等到熟悉"
+  },
+  {
+    "name": "SQL Server",
+    "score": 50,
+    "level": "中等"
+  }],
+  "duties": [
+    "需求溝通與程式撰寫",
+    "教育訓練",
+    "業務或其他雜事"
+  ],
+  "languages": [{
+    "name": "中文",
+    "level": "母語"
+  },{
+    "name": "English",
+    "level": "可以閱讀長篇文件與簡單的聽說"
+  }],
+  "interests": [{
+    "name": "",
+    "keywords": [
+      "ASP.NET Core",
+      "TDD 測試導向開發",
+      "Angular2",
+      "透過 Docker 隔離開發環境",
+      "專案架構與需求談判"
+    ]
+  }],
+  "recommended": [{
+    "name": "ilandy",
+    "position": "大心數位 - 前端工程師",
+    "summary": "Austin 是我見過最重視使用者體驗的後端工程師"
+  }],
+  "conslusion": "我是張瑀，希望下一段故事能在您的公司延續。"
+}

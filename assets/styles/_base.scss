@@ -1,0 +1,188 @@
+
+// wrap
+.wrap {
+  width: getEMSize($wrap-width*2);
+  margin: getEMSize(50) auto;
+  padding: getEMSize(30);
+  box-shadow: 0 getEMSize(50) getEMSize(70) getEMSize(-35) rgba(0,0,0,.3);
+  background: $grey09;
+
+  border-radius: getEMSize(2);
+  &:before {
+    @extend %pseudo-elm;
+    top: 0;
+    left: 0;
+    height: getEMSize(352);
+    width: getEMSize(320);
+    background: $grey09;
+    z-index: 1;
+  }
+}
+
+// 外框線
+.liner {
+  border: getEMSize(6) solid $mainC;
+  border-radius: 8px;
+  &:before,
+  &:after {
+    border-radius: getEMSize(8);
+    z-index: 3;
+  }
+
+  &:before {
+    @include setPseudeElmSize(50,30);
+    transform: skewY(-50deg);
+    top: getEMSize(270);
+    left: 0;
+    box-shadow: getEMSize(-6) getEMSize(-10) 0 $mainC;
+  }
+
+  &:after {
+    @include setPseudeElmSize(50,40);
+    transform: skewX(-45deg);
+    width: getEMSize(50);
+    height: getEMSize(45);
+    top: 0;
+    left: getEMSize(236);
+    box-shadow: getEMSize(-9) getEMSize(-6) 0 $mainC;
+  }
+
+}
+
+//  人物簡歷
+.personal {
+  display: inline-block;
+  width: getEMSize(334);
+  margin: 0 getEMSize(40);
+}
+.p-title {
+  font-family: $font-title-EN;
+  margin-top: getEMSize(100,1rem);
+  padding-bottom: getEMSize(5);
+  font-size: getEMSize(96);
+  line-height: 1em;
+  letter-spacing: -5px;
+  text-transform: uppercase;
+}
+.p-subtitle {
+  font-size: getEMSize(28);
+  font-weight: 100;
+  span {
+    display: inline-block;
+    background: $grey09;
+    padding-right: getEMSize(10);
+    z-index: 2;
+  }
+  &:after {
+    @extend %pseudo-elm;
+    width: 70%;
+    top: 50%;
+    left: 0;
+    border-bottom: getEMSize(1,1rem) solid $mainC;
+    z-index: 1;
+
+  }
+}
+.photo {
+  overflow: hidden;
+  @include setContainerSize(214,214);
+  margin-top: getEMSize(30);
+  left: getEMSize(-20);
+  border-radius: 100%;
+  box-shadow: 0 0 0 getEMSize(4) $grey06 inset,0 0 0 getEMSize(12) $mainC inset;
+  background: url($file-path+'/photo@2x.png') center/95%;
+  z-index: 2;
+}
+.jobs {
+  margin-top: getEMSize(54);
+  font-family: $font-content-EN;
+  font-size: getEMSize(28);
+  font-weight: 500;
+}
+.contact {
+  margin: getEMSize(100) 0;
+
+  font-family: $font-content-EN;
+  .c-group {
+    margin-bottom: getEMSize(30);
+  }
+  .c-label {
+    display: block;
+    letter-spacing: getEMSize(1);
+    font-weight: 500;
+  }
+  .c-content {
+    display: block;
+    font-size: getEMSize(20);
+    font-weight: 300;
+    text-decoration: none;
+    color: $mainC;
+    transition: color .5s;
+    &:focus,
+    &:hover {
+      outline: none;
+      color: $subC;
+    }
+  }
+}
+
+.info {
+  display: inline-block;
+  margin: getEMSize(52) getEMSize(40);
+  margin-left: 0;
+  padding-left: getEMSize(48);
+  width: getEMSize(660);
+  border-left: 1px solid $mainC;
+
+  .info-block {
+    padding-top: getEMSize(48);
+  }
+  .info-panel {
+    padding-top: getEMSize(23);
+  }
+  .info-title {
+    font-size: getEMSize(18);
+  }
+  .item {
+    padding-bottom: getEMSize(30);
+    font-size: getEMSize(18);
+    line-height: getEMSize(36);
+    .item-title {
+      font-weight: 500;
+    }
+    .item-times {
+      padding: getEMSize(10) 0;
+
+    }
+    p,
+    p > span {
+      font-family: 'Andale Mono';
+    }
+    p > .display-ib:last-child {
+      width: 85%;
+    }
+
+  }
+
+}
+.title {
+  letter-spacing: getEMSize(3);
+  text-transform: uppercase;
+  font-family: $font-title-EN;
+  font-size: getEMSize(50);
+  font-weight: 100;
+  &:after {
+    @extend %pseudo-elm;
+    left: getEMSize(-48,1rem);
+    top: 0;
+    width: getEMSize(10,1rem);
+    height: getEMSize(10,1rem);
+    background: $subC;
+    border-radius: 100%;
+  }
+}
+.display-ib {
+  display: inline-block;
+}
+
+
