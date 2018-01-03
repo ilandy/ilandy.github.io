@@ -1,0 +1,464 @@
+@charset "utf-8";
+/*-----------------------------------------------------------------------------
+[TABLE OF CONTENTS]
+    +media
+        + max-width : 1280px
+        + max-width : 1020px
+-----------------------------------------------------------------------------*/
+/* media 
+*----------------------------------------------------------------------------*/
+/**
+*
+* Desktops
+*
+**/
+@media only screen 
+and (max-width : 1280px) {
+    header .navbar .logo { left: 10px; width: 112px; height: 36px;}
+    header .navbar .toolsComplex { right: 10px;}
+    header .navbar .main .redBg { left: 125px;}
+    header .navbar .otherLink {
+        left: 195px;
+    }
+/* 20th */
+    header .navbar .logo { top: 14px; left: 10px; width: 140px; height: 35px;}
+/* 20th end */
+    footer .main { padding: 0 20px;}
+    footer .partnersLogoList,
+    footer .footerRight {
+        text-align: center;
+        display: block;
+        vertical-align: middle;
+    }
+    footer .partnersLogoList {
+        padding: 0 0 15px 0;
+    }
+    footer .footerRight .linkComplex,
+    footer .footerRight .copyright {
+            text-align: center;
+    }
+    
+}
+@media only screen 
+and (max-width : 1140px) {
+    /*header .navbar .main .redBg { left: 120px;}
+    header .navbar .otherLink { left: 200px;}*/
+    
+    header .navbar .otherLink > a {
+        padding: 0 14px 0 8px;
+        font-size: 15px;
+        line-height: 24px;
+    }
+    header .navbar .otherLink > a:last-child {
+        padding: 0 0 0 8px;
+        border-right: 0;
+    }
+    header .navbar .toolsComplex .toolsLink {
+        margin: 0;
+    }
+    header .navbar .toolsComplex .toolsLink > a.myCenterComplex {
+    }
+    header .navbar .toolsComplex .toolsLink > a {
+        font-size: 14px;
+    }
+    header .navbar .toolsComplex a.retail {
+        border-right: 0;
+        margin: 0;
+    }
+    header .navbar .toolsComplex a.myCenterComplex,
+    header .navbar .toolsComplex a.eCareComplex,
+    header .navbar .toolsComplex a.retail {
+    	background-size: 16px auto;
+    }
+}
+@media only screen 
+and (max-width : 1020px) {
+    #wrapper {
+        overflow: hidden;
+    }
+    header .topbar a {
+        padding: 0 20px;
+    }
+    header .memberbar a,
+    header .memberbar span,
+    header .memberbar .login {
+        font-size: 12px;
+    }
+           
+    /*header .navbar .toolsComplex { top: 10px;}*/
+    header .navbar .toolsComplex a { margin: 0; font-size: 11px; padding: 28px 0 0;}    
+    header .navbar .toolsComplex a.qa { margin: 0 20px 0 5px;}
+    section article h2.mainHead { margin: 0 0 10px;}
+    
+    footer { padding: 20px 20px;}
+    footer .selectBox { top: 0;}   
+        
+    header .navbar .otherLink > a {
+        padding: 0 8px 0 4px;
+        font-size: 15px;
+        line-height: 24px;
+    }
+    header .navbar .otherLink > a:last-child {
+        padding: 0 0 0 4px;
+        border-right: 0;
+    }
+    
+    /*
+    header .navbar .main .redBg { left: 70px;}
+    header .navbar .otherLink { left: 140px;}
+    header .navbar .toolsComplex .toolsLink > a.myCenterComplex {
+        margin: 0 5px 0 0;
+        padding: 0 8px 0 22px;
+    }
+    header .navbar .toolsComplex .toolsLink > a {
+        margin: 0 5px 0 0;
+        padding: 0 8px 0 22px;
+        font-size: 15px;
+    }
+    */
+    
+
+}
+@media only screen 
+and (max-width : 767px) {
+    header .navbar .otherLink {
+        display: none;
+    }
+    header .topbar,
+    header .memberbar,
+    header .navbar .toolsComplex,
+    article.otherLinkBox .otherBox,
+    footer .monitor { display: none;}
+    footer .mobile { display: block;}
+    .backtop {
+        right: 5px;
+        bottom: 100px;
+    }
+    
+    header .topAd .mainTitle {
+        font-size: 18px;
+    }
+    header .topAd .main .boxColumn {
+        padding: 10px 50px 10px 0;
+    }
+	header .topAd .mainTitle .boxComplex {
+        padding: 0 0 0 15px;
+        margin: 0 20px;
+    }
+    header .topAd .button {
+        padding: 2px 0;
+    }
+    header .topAd .button a {
+    	font-size: 15px;
+        height: auto;
+        line-height: 24px;
+        padding: 5px 10px;
+        text-align: left;
+        width: 120px;
+    }
+    header .topAd .button a img {
+        top: 0;
+    }
+    header .topAd .monitor {
+        display: none;
+    }
+    header .topAd .mobile {
+        display: block;
+    }
+    header .navbar .redBg { height: 42px;}
+    header .navbar .main .redBg { left: 50px;height: 42px;}
+/* 20th */
+    header .navbar .main .redBg { left: 80.5px;}
+/* 20th end */
+    header .navbar {
+        height: 42px;
+    }
+    header .navbar .main {
+        text-align: right;
+    }
+    header .navbar .logo {
+        top: 5px;
+        left: 5px;
+        width: 80px;
+        height: 29px;
+        z-index: 1;
+    }
+
+/* 20th */
+    header .navbar .logo {
+        top: 6px;
+        left: 10px;
+        width: 110.5px;
+        height: 28px;
+    }
+/* 20th end */
+    header .navbar .navMobile {
+        position: relative;
+        float: right;
+        display: block;
+        z-index: 1;
+    }
+    
+    header .navbar .navMobile a.FETnetComplex {
+        background: url(../images/mobile/icon_fet.jpg) no-repeat;
+    }
+    header .navbar .navMobile a.retail {
+        background: url(../images/mobile/btn_retail.jpg) no-repeat;
+    }
+    header .navbar .navMobile a.menuComplex {
+        background: url(../images/mobile/btn_menu.jpg) no-repeat;
+    }
+    header .navbar .navMobile a.FETnetComplex,
+    header .navbar .navMobile a.retail,
+    header .navbar .navMobile a.menuComplex {
+        float: left;
+        width: 42px;
+        height: 42px;
+        font-size: 0;
+    	background-size: 42px auto;
+    }
+    header .navbar .navMobile a.msgComplex {
+        width: 53px;
+        margin: 0 4px 0 0;
+    	background-size: 53px auto;
+    }
+    
+
+    header .navbar .menuMobile {
+        display: block;
+    }
+	header .menuMobile {
+	    display: block;
+	}
+	
+    header .memberbar .login a,
+    header .memberbar .logout a {
+        padding: 0 0 0 37px;
+    }
+    section article h2.mainHead,
+    aside.toolbar h2.mainHead span,
+    article.hotLinkBox h2.mainHead {
+        font-size: 16px;
+    }    
+    
+    footer .main { padding: 0;}
+	
+    footer .partnersLogoList ul li img {
+        max-width: 68px;
+    }
+    footer .partnersLogoList {
+        padding: 10px 0 2px 0;
+    }
+    footer { padding: 20px 20px 10px 20px;}
+}
+@media only screen 
+and (max-width : 480px) {
+    footer {
+        padding: 20px 5px 10px;
+    }
+    footer .partnersLogoList ul li {
+        display: inline-block;
+        margin: 4px 1px;
+    }
+    footer .partnersLogoList ul li img {
+        max-width: 72px;
+    }
+}
+/**
+*
+* iPads
+*
+**/
+@media only screen
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+    header .navbar {
+        height: 50px;
+    }
+    header .navbar .redBg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 54%;
+        height: 50px;
+    }
+    header .navbar .logo {
+        position: absolute;
+        top: 9px;
+        left: 0;
+        width: 87px;
+        height: 31px;
+    }
+/* 20th */
+    header .navbar .logo { top: 10px; width: 120px; height: 30px;}
+    header .navbar .redBg { left: 43%;}
+/* 20th end */
+    header .main {
+        margin: 0 16px 0 16px;
+        max-width: 1248px;
+    }
+    header .navbar .main .redBg { left: 82px;}
+    header .navbar .unitComplex {
+        top: 18px; left: 170px;
+    }
+    header .navbar .toolsComplex {
+        top: 12px;
+        right: 0;
+    }
+    header .navbar .toolsComplex .toolsLink > a {
+        font-size: 13px;
+    }
+    header .navbar .otherLink { left: 160px; top: 13px;}
+    /*
+    header .navbar .toolsComplex .toolsLink > a {
+        margin: 0 4px 0 0;
+        padding: 0 8px 0 0;
+    }*/
+
+    /*header .navbar .main .redBg { left: 100px;}
+    header .navbar .otherLink { left: 200px;}*/
+    header .navbar .toolsComplex > a {
+        font-size: 9px;
+        padding: 30px 0 0;
+    }    
+    header .navbar .toolsComplex a.msgComplex,
+    header .navbar .toolsComplex a:hover.msgComplex,
+    header .navbar .toolsComplex a.qaComplex,
+    header .navbar .toolsComplex a:hover.qaComplex {
+    	background-size: 32px auto;
+    }
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+    header .navbar {
+        height: 37px;
+    }
+    header .navbar .redBg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 49%;
+        height: 37px;
+    }
+    header .navbar .logo {
+        position: absolute;
+        top: 7px;
+        left: 0;
+        width: 65px;
+        height: 23px;
+        z-index: 1;
+    }
+    header .navbar .main .redBg { left: 20px;}
+/* 20th */
+    header .navbar .main .redBg { left: 61px;}
+    header .navbar .logo { top: 7px; left: 8px; width: 95px; height: 24px;}
+    header .navbar .redBg { }
+/* 20th end */
+    header .main {
+        margin: 0 12px 0 12px;
+        max-width: 1256px;
+    }
+
+    header .navbar .toolsComplex .toolsLink > a {
+        margin: 0 4px 0 0;
+        padding: 0 8px 0 19px;
+    }
+    header .navbar .toolsComplex .toolsLink > a.myCenterComplex {
+        margin: 0 4px 0 0;
+        padding: 0 8px 0 19px;
+    }
+
+    header .navbar .toolsComplex {
+        top: 11px;
+        right: 0;
+    }
+    header .navbar .toolsComplex > a {
+        padding: 28px 0 0;
+        zoom: .66;
+        font-size: .68em;
+    }
+    header .navbar .toolsComplex a.qaComplex { 
+        margin: 0 18px 0 7px;
+    }
+
+
+    header .navbar .toolsComplex .toolsLink {
+        margin: -5px 10px 0 0;
+    }
+    header .navbar .toolsComplex .toolsLink > a {
+        font-size: 10px;
+    }
+    /*
+    header .navbar .main .redBg {
+        left: 107.5px;
+    }
+    */
+    header .navbar .unitComplex {
+        top: 11px;
+        font-size: 12px;
+        left: 150px;
+    }
+    header .navbar .otherLink {
+        top: 6px;
+        left: 120px;
+/* 20th */
+        left: 150px;
+/* 20th end */
+    }
+    header .navbar .otherLink > a {
+        font-size: 12px;
+    }
+
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+
+}
+/**
+*
+* iPhones 
+*
+**/
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 767px) {
+    header .navbar .logo {
+        top: 5px;
+        left: 5px;
+        width: 80px;
+        height: 29px;
+    }
+    header .navbar .redBg { left: 200px;}
+    header .navbar .main .redBg { left: 50px;}
+/* 20th */
+    header .navbar .logo { top: 6px; left: 10px; width: 110.5px; height: 28px;}
+    header .navbar .main .redBg { left: 81px;}
+/* 20th end */
+    
+}
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 767px) 
+and (orientation : portrait) {
+
+}
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 767px) 
+and (orientation : landscape) {
+
+}
+/**
+*
+* ratio: 1.5
+*
+**/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	   only screen and (min--moz-device-pixel-ratio: 1.5),
+	   only screen and (min-device-pixel-ratio: 1.5){
+}
+
