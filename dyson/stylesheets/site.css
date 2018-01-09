@@ -2579,6 +2579,8 @@ body, html {
       line-height: 40px;
       text-align: center;
       cursor: pointer; }
+      .nav .nav-social li a {
+        color: white; }
       @media all and (min-width: 768px) {
         .nav .nav-social li {
           margin: 0 5px; } }
