@@ -2503,12 +2503,17 @@ body, html {
 .nav {
   position: relative;
   float: left;
-  width: 100%; }
+  width: 100%;
+  background-color: rgba(244, 235, 233, 0.4); }
+  .nav.fixed {
+    position: fixed;
+    background-color: rgba(244, 235, 233, 0.8); }
   @media all and (min-width: 768px) {
     .nav {
       width: 730px;
       padding-top: 10px;
-      padding-left: 10px; } }
+      padding-left: 10px;
+      background-color: transparent; } }
   .nav .nav-list {
     display: none; }
     @media screen and (max-width: 480px) {
@@ -2527,7 +2532,7 @@ body, html {
     @media screen and (max-width: 480px) {
       .nav .nav-list.active {
         left: 0vw;
-        background-color: rgba(54, 178, 155, 0.8); } }
+        background-color: rgba(54, 178, 155, 0.95); } }
     @media all and (min-width: 768px) {
       .nav .nav-list {
         display: inline-block;
@@ -2544,8 +2549,6 @@ body, html {
           width: 100%;
           margin: 5px 0;
           position: relative; }
-          .nav .nav-list li:first-child {
-            display: none; }
           .nav .nav-list li:before {
             content: "";
             width: 70%;
@@ -2646,6 +2649,17 @@ body, html {
       .nav .nav-mob.active .bar:after {
         -webkit-transform: translateY(0) rotate(-45deg);
                 transform: translateY(0) rotate(-45deg); }
+
+.preload {
+  display: none;
+  position: absolute;
+  left: -999px;
+  top: -999px;
+  width: 0;
+  height: 0; }
+  .preload > img {
+    height: 0;
+    width: 0; }
 
 .backTop {
   width: 40px;
