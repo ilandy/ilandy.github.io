@@ -2507,6 +2507,7 @@ body, html {
   background-color: rgba(244, 235, 233, 0.4); }
   .nav.fixed {
     position: fixed;
+    z-index: 3;
     background-color: rgba(244, 235, 233, 0.8); }
   @media all and (min-width: 768px) {
     .nav {
