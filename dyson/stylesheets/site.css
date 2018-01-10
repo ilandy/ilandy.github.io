@@ -2513,7 +2513,10 @@ body, html {
       width: 730px;
       padding-top: 10px;
       padding-left: 10px;
-      background-color: transparent; } }
+      background-color: transparent; }
+      .nav.fixed {
+        position: relative;
+        background-color: transparent; } }
   .nav .nav-list {
     display: none; }
     @media screen and (max-width: 480px) {
