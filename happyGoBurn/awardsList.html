@@ -1,0 +1,599 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv=”Content-Language” content="zh-tw">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>遠傳電信FETnet</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" type="image/gif" href="images/animated_favicon1.gif" />
+<link rel="icon" sizes="192x192" href="images/fet.png"/>
+<link rel="apple-touch-icon" href="images/fet.png"/>
+<link rel="apple-touch-icon-precomposed" href="images/fet.png"/>
+</head>
+<body>
+<div id="wrapper">
+    <!--============================== header start ==============================-->
+    <header>
+        <div class="navbar">
+            <div class="main">
+                <div class="logo"><a href="http://www.fetnet.net/home/" onClick="sendCTRLog(TRC['logo']);"><img alt="遠傳電信 FETnet" src="images/logo.png"></a></div>
+                <div class="otherLink">
+                    <a href="https://www.fetnet.net/estore/" onClick="sendCTRLog(TRC['navEstore']);">網路門市</a>
+                    <a href="https://www.fetnet.net/device/home" onClick="sendCTRLog(TRC['navDevice']);">手機．平板</a>
+                    <a href="https://www.fetnet.net/postpaid/home.html" onClick="sendCTRLog(TRC['navPostpaid']);">月租型方案</a>
+                    <a href="https://www.fetnet.net/prepaid/home.html" onClick="sendCTRLog(TRC['navPrepaid']);">預付型方案</a>
+                </div>
+                <div class="toolsComplex">
+                    <div class="toolsLink">
+                        <a class="myCenterComplex" href="https://www.fetnet.net/mycenter/home" onClick="sendCTRLog(TRC['navMycenter']);">我的專區</a>
+                        <a class="eCareComplex" href="https://ecare.fetnet.net/eServiceV3/homePageController/getBillPaymentDepositHomePage.action" onClick="sendCTRLog(TRC['navService']);">用戶服務</a>
+                        <a class="retail" href="https://www.fetnet.net/info/search-retail" onClick="sendCTRLog(TRC['navSearchRetail']);">找門市</a>
+                    </div>
+                </div>
+                <div class="navMobile">
+                    <a class="retail" href="https://m.fetnet.net/information/eservice_ShopCenter3.html" onClick="sendCTRLog(TRC['navSearchRetail_m']);">找門市</a>
+                    <a class="FETnetComplex" href="http://www.fetnet.net/home/" onClick="sendCTRLog(TRC['navBackHome']);">回首頁</a>
+                </div>
+                <div class="redBg"></div>
+            </div>
+            <div class="redBg"></div>
+        </div>
+    </header>
+    <!--============================== header close ==============================-->
+    <!--============================== section start ==============================-->
+    <section class="happyGoBurn" >
+    	<main>
+            <div class="crumbBox" itemscope itemtype="http://schema.org/WebPage" style="display: none;">
+                <div class="mainBox" itemprop="breadcrumb">
+                    <h1 class="mainHead" itemprop=name>遠傳客戶專屬回饋，吃喝玩樂超多優惠 – 遠傳電信FETnet</h1>
+                </div>
+            </div>
+            <!-- start -->
+            
+            <div class="hgr-content hgr-inner" id="app">
+                <div class="hgr-submenu">
+                    <div class="hgr-menuBtn-mob">
+                        <div class="bar"></div>
+                    </div>
+                    <ul class="hgr-links">
+                        <li><a href="happyGoBurn.html">遊戲首頁</a></li>
+                        <li><a href="infomation.html">活動辦法</a></li>
+                        <li><a href="awards.html">獎項清單</a></li>
+                        <li><a href="awardsList.html">中獎名單</a></li>
+                        <li><a href="history.html">歷史紀錄查詢</a></li>
+                        <li onclick="popCtrl('.point')"><a href="###">HAPPYGO點數查詢</a></li>
+                    </ul>
+                </div>
+                <div class="hgr-kv kv-inner">
+                    <!-- single kv -->
+                    <img src="images/happyGoBurn/ilandy/FET_burn_kv.jpg" alt="">
+                    <img class="mob-show" src="images/happyGoBurn/ilandy/mob_FET_burn_kv.jpg" alt="">
+                </div>
+                <div class="hgr-panel award-people">
+                    <div class="panel">
+                        <h1 class="panel-title award-people">
+                            中獎名單
+                        </h1>
+                    </div>
+                    <div class="panel-time">
+                        <div class="time-ctrl-left final" onclick="dateCtrl(-1)">向前選擇</div>
+                        <div class="time-ctrl-center">
+                            <ul class="time-selector">
+                                <li class="time active">
+                                    <span class="start">2018/04/01</span>
+                                    <span> ~ </span>
+                                    <span class="end">2017/07/31</span>
+                                </li>
+                                <li class="time">
+                                    <span class="start">2016/03/31</span>
+                                    <span> ~ </span>
+                                    <span class="end">2015/08/31</span>
+                                </li>
+                                <li class="time empty">
+                                    <span>敬請期待</span>
+                                </li>
+                                <li class="time empty">
+                                    <span>敬請期待</span>                                
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="time-ctrl-right" onclick="dateCtrl(1)">向右選擇</div>
+                    </div>
+                    
+                    
+                    <div class="clearfix"></div>
+                    
+                    <div  class="panel-people">
+                       <div class="people-rows flex">
+                           <div class="title-col flex">
+                             <div class="awards-col red-word fz-15">{{awards1.item}}</div>
+                             <div class="awards-col"><div class="hightlight blue fz-13">{{awards1.num}}名</div></div>
+                           </div>
+                           <div class="people-col">
+                                <div class="people-rows-list flex" v-for="p in awards1.people" >
+                                    <div class="people-info flex">
+                                        <div class="awards-col fz-15">{{p.id}}</div>
+                                        <div class="awards-col fz-15">{{p.name}}</div>
+                                        <div class="awards-col fz-15">{{p.mob}}</div>
+                                    </div>
+                                    <div class="awards-col people-email fz-15">{{p.email}}</div>
+                                </div>
+                           </div>
+                       </div>
+                       <div class="panel-slide-ctrl mx-0 w100" v-if="awards1.people.length > 4">看更多</div>
+                    </div>
+                    <!-- 獎項2 -->
+                    <div  class="panel-people">
+                        <div class="people-rows flex">
+                            <div class="title-col flex">
+                              <div class="awards-col red-word fz-15">{{awards2.item}}</div>
+                              <div class="awards-col"><div class="hightlight blue fz-13">{{awards2.num}}名</div></div>
+                            </div>
+                            <div class="people-col">
+                                 <div class="people-rows-list flex" v-for="p in awards2.people">
+                                     <div class="people-info flex">
+                                         <div class="awards-col fz-15">{{p.id}}</div>
+                                         <div class="awards-col fz-15">{{p.name}}</div>
+                                         <div class="awards-col fz-15">{{p.mob}}</div>
+                                     </div>
+                                     <div class="awards-col people-email fz-15">{{p.email}}</div>
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="panel-slide-ctrl mx-0 w100" v-if="awards2.people.length > 4">看更多</div>
+                     </div>
+                     <!-- 獎項3 -->
+                     <div  class="panel-people hasSlideCtrl">
+                        <div class="people-rows flex">
+                            <div class="title-col flex">
+                              <div class="awards-col red-word fz-15">{{awards3.item}}</div>
+                              <div class="awards-col"><div class="hightlight blue fz-13">{{awards3.num}}名</div></div>
+                            </div>
+                            <div class="people-col">
+                                 <div class="people-rows-list flex" v-for="p in awards3.people">
+                                     <div class="people-info flex">
+                                         <div class="awards-col fz-15">{{p.id}}</div>
+                                         <div class="awards-col fz-15">{{p.name}}</div>
+                                         <div class="awards-col fz-15">{{p.mob}}</div>
+                                     </div>
+                                     <div class="awards-col people-email fz-15">{{p.email}}</div>
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="panel-slide-ctrl mx-0 w100" v-if="awards3.people.length > 4">看更多</div>
+                     </div>
+                     <!-- 獎項4 -->
+                     <div  class="panel-people hasSlideCtrl">
+                        <div class="people-rows flex">
+                            <div class="title-col flex">
+                              <div class="awards-col red-word fz-15">{{awards4.item}}</div>
+                              <div class="awards-col"><div class="hightlight blue fz-13">{{awards4.num}}名</div></div>
+                            </div>
+                            <div class="people-col">
+                                 <div class="people-rows-list flex" v-for="p in awards4.people">
+                                     <div class="people-info flex">
+                                         <div class="awards-col fz-15">{{p.id}}</div>
+                                         <div class="awards-col fz-15">{{p.name}}</div>
+                                         <div class="awards-col fz-15">{{p.mob}}</div>
+                                     </div>
+                                     <div class="awards-col people-email fz-15">{{p.email}}</div>
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="panel-slide-ctrl mx-0 w100" v-if="awards4.people.length > 4">看更多</div>
+                     </div>
+                     <!-- 獎項5 -->
+                     <div  class="panel-people hasSlideCtrl">
+                        <div class="people-rows flex">
+                            <div class="title-col flex">
+                              <div class="awards-col red-word fz-15">{{awards5.item}}</div>
+                              <div class="awards-col"><div class="hightlight blue fz-13">{{awards5.num}}名</div></div>
+                            </div>
+                            <div class="people-col">
+                                 <div class="people-rows-list flex" v-for="p in awards5.people">
+                                     <div class="people-info flex">
+                                         <div class="awards-col fz-15">{{p.id}}</div>
+                                         <div class="awards-col fz-15">{{p.name}}</div>
+                                         <div class="awards-col fz-15">{{p.mob}}</div>
+                                     </div>
+                                     <div class="awards-col people-email fz-15">{{p.email}}</div>
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="panel-slide-ctrl mx-0 w100 fz-15" v-if="awards5.people.length > 4">看更多</div>
+                     </div>
+                </div>
+            </div>
+            
+            
+            <!-- end -->
+            <!-- pop -->
+            <div class="hgr-pop">
+                    <div class="point">
+                        <div class="point-header">
+                            <p class="w100">現有紅利點數</p>
+                            <div class="close-pop"></div>
+                        </div>
+                        <div class="point-body">
+                            <div class="point-total">
+                                <div class="red-word">69點</div>
+                                <p>(不含今日交易點數)</p>
+                            </div>
+                            <p>今年<span class="blue-word">2017-12-31</span>到期點數：<span class="red-word">40</span>點</p>
+                            <p class="py-10">明年<span class="blue-word">2018-12-31</span>到期點數：<span class="red-word">29</span>點</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- pop end -->
+		</main>
+    </section>
+    <!--============================== section close ==============================-->
+    <!--============================== footer start ==============================-->
+    <footer>
+        <div class="monitor ch-footer">
+            <div class="main wow fadeInUp" data-wow-duration=".75s">
+                <div class="footerRight">
+                    <div class="linkComplex">
+                        <a href="http://www.fetnet.net/information/privacy.html" onClick="sendCTRLog(TRC['linkPrivacy']);">隱私權</a> ｜ 
+                        <a href="http://www.fetnet.net/information/copyright.html" onClick="sendCTRLog(TRC['linkCopyright']);">著作權條款</a> ｜ 
+                        <a href="https://www.fetnet.net/mediad/" onClick="sendCTRLog(TRC['linkMediad']);">媒體行銷</a> ｜ 
+                        <a href="https://ww.fetnet.net/online_proposal/home.jsp" onClick="sendCTRLog(TRC['linkProposal']);">合作提案</a> ｜ 
+                        <a href="https://www.fetnet.net/cs/Satellite/Corporate/coEmployment" onClick="sendCTRLog(TRC['linkEmployment']);">菁英招募</a> ｜ 
+                        <a href="http://www.cpc.ey.gov.tw/" target="_blank" onClick="sendCTRLog(TRC['linkCpc']);">行政院消保會</a> ｜ 
+                        <a href="https://www.fetnet.net/cs/Satellite/Corporate/coBusinessRegulation" onClick="sendCTRLog(TRC['linkBusinessRegulation']);">營業規章/服務契約</a> ｜ 
+                        <a href="https://www.fetnet.net/cs/Satellite/Corporate/coSociety" onClick="sendCTRLog(TRC['linkSociety']);">企業社會責任</a>
+                	</div>
+                    <div class="copyright">
+                        遠傳手機直撥888/123 MVPN用戶99888/123(免費)；市話撥449-5888/449-5123 (市內計費)。
+                        <a href="http://ecare.fetnet.net/eServiceV3/customerServiceController/CustomerServiceInitPage.action">其他服務專線</a><br />
+                		遠傳電信版權所有 Copyright © Far Eastone Telecommunications Co., Ltd. All Rights Reserved.
+                	</div>
+            	</div>
+            </div>
+        </div>
+        <div class="mobile ch-footer">
+            <div class="tools">
+                <a href="https://www.fetnet.net/cs/Satellite/M_MemberCenter/mMcHome" onClick="sendCTRLog(TRC['navMycenter_m']);"><img src="images/icon/icon_myCenter_s_bk.png" /> 我的專區</a>
+                <a href="https://www.fetnet.net/mobile/eservice/public/it/n/eServiceController/getEServicePage.action" onClick="sendCTRLog(TRC['navService_m']);"><img src="images/icon/icon_eservice_s_bk.png" /> 用戶服務</a>
+            </div>
+            <div class="main">
+                <div class="url"><a href="https://ww.fetnet.net/online_proposal/home.jsp" onClick="sendCTRLog(TRC['linkProposal_m']);">合作提案</a></div>
+                <div class="copyright">遠傳電信版權所有 Copyright ©</div>
+            </div>
+        </div>
+        <div class="backtop"><a href="javascript:void(0);" onClick="sendCTRLog(TRC['backtop']);">Back to Top</a></div>
+    </footer>
+    <!--============================== footer close ==============================-->
+</div>
+<!--============================== css start ==============================-->
+<link rel="stylesheet" href="css/style_FET.css" />
+<link rel="stylesheet" href="css/media_FET.css" />
+<link rel="stylesheet" href="css/happyGoBurn.css" />
+<!--============================== css close ==============================-->
+<!--============================== script start ==============================-->
+<!--[if IE]>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.ui.min.js"></script>
+<script src="js/jquery.wow.min.js"></script>
+<script src="js/slick.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="js/site.js"></script>
+<script>
+var stickyNavTop = 0;
+window.onload = function() {
+    if (window.applicationCache) {
+        //alert("你的浏览器支持HTML5");
+    } else {
+        alert("你的浏览器不支持HTML5");
+    }
+}
+var app = new Vue({
+  el: '#app',
+  data: {
+      awards1:
+      {
+          item: "APPLE iPhoneX  256GB",
+          num: 1,
+          people: [
+              {
+                  id: "001",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              }
+          ]
+      },
+      awards2: {
+          item: "燦星旅遊金 20,000元",
+          num: 1,
+          people: [
+              {
+                  id: "002",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweilifsdfdsfsfsfsdfsfsfsfsfssdffsiiuy@farestone.com.tw"                                    
+              }
+          ]
+      },
+      awards3: {
+          item: "誠品圖書禮券誠品圖書禮券 1000元 ",
+          num: 10,
+          people: [
+              {
+                  id: "003",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "004",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "005",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },
+              {
+                  id: "006",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "007",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "008",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "009",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "010",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "011",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "012",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              }
+          ]
+      },
+      awards4: {
+          item: "遠遊卡_日本(NT$588)",
+          num: 10,
+          people: [
+              {
+                  id: "013",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "014",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "015",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },
+              {
+                  id: "016",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "017",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "018",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "019",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "020",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "021",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "022",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              }
+          ]
+      },
+      awards5: {
+          item: "哈根達斯1品脫兌換券",
+          num: 50,
+          people: [
+              {
+                  id: "023",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "024",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "025",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },
+              {
+                  id: "026",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "027",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "028",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "029",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "030",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "031",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "032",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "033",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "034",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "035",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },
+              {
+                  id: "036",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "037",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "038",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "039",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "040",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "041",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "042",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "043",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "044",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "045",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },
+              {
+                  id: "046",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "047",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "048",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "049",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              },{
+                  id: "050",
+                  name: "林Ｏ偉",
+                  mob: "0912345XXX",
+                  email: "linweiliiiuy@farestone.com.tw"                                    
+              }
+          ]
+      }
+  }});
+$(document).ready(function() {
+    
+});
+</script>
+<!--============================== script close ==============================-->
+</body>
+</html>
+
