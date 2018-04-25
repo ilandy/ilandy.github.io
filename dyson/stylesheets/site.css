@@ -2688,6 +2688,8 @@ body, html {
   margin-right: 10px;
   border: #35b29c solid 1px;
   background-color: white; }
+  .article.article-full {
+    width: 96%; }
   @media all and (min-width: 768px) {
     .article {
       width: 47%;
@@ -2798,16 +2800,18 @@ body, html {
       .article-disc h1 {
         float: none;
         width: calc(100% - 472px - 20px); } }
-  .article-disc img {
+  .article-disc .header-img {
     width: 100%;
     margin-top: 10px; }
     @media all and (min-width: 768px) {
-      .article-disc img {
+      .article-disc .header-img {
         float: right;
         width: 472px;
         margin-top: -40px;
         margin-left: 20px;
         margin-bottom: 20px; } }
+  .article-disc .content-img {
+    max-width: 100%; }
 
 .p-title {
   -webkit-box-sizing: border-box;
@@ -2876,6 +2880,9 @@ body, html {
   @media all and (min-width: 768px) {
     .pt-30 {
       padding-top: 15px; } }
+
+.mt-0 {
+  margin-top: 0; }
 
 .btn {
   display: inline-block;
