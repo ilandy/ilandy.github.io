@@ -84,7 +84,7 @@ html {
   background-color: #222;
 }
 .wrap {
-  height: 100vh;
+  height: 85.5vh;
   overflow: auto;
   h1.name {
     padding-top: 0.85em;
@@ -186,10 +186,10 @@ a {
     }
     &.isActive {
         position: fixed;
-        width: 95vw;
-        top: 130px;
+        width: 100%;
+        top: 125px;
         left: 0;
-        padding-left: 5vw;
+        padding-left: 5%;
         padding-bottom: 30px;
         background-color: #222;
       }
