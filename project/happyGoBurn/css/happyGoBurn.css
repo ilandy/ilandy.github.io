@@ -1,0 +1,1815 @@
+@charset "utf-8";
+/*-----------------------------------------------------------------------------
+[TABLE OF CONTENTS]
+    +layout
+    +event menu
+    +kv
+    +go 區塊
+    +social
+    +game
+    +innerPage
+    +活動辦法
+    +獎品清單
+    +中獎清單
+    +歷史紀錄
+    +Light box
+    +date slide
+    +utility
+-----------------------------------------------------------------------------*/
+/* section
+*----------------------------------------------------------------------------*/
+
+/** preload **/
+.prload {
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    left: -99px;
+    top: -99px;
+}
+.prload img {
+    width: 0;
+    height: 0;
+}
+/* layout */
+#wrapper {
+    overflow-x: hidden !important;
+}
+.flex {
+    display: flex;
+}
+/* event menu */
+.hgr-submenu {
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255,255,255,.9);
+    padding: 15px 0;
+    box-shadow: 0 3px 10px rgba(71, 42, 42, 0.2);     
+    transition: background-color .2s;
+}
+.hgr-submenu.fixed {
+    position: fixed
+}
+.hgr-submenu a {
+    display: inline-block;
+    color: #f1635d;
+    font-size: 16px;
+    transition: transform .5s;
+} 
+.hgr-submenu a:hover {
+    color: #8f1c36;
+    transform: scale(1.125)
+} 
+.hgr-menuBtn-mob {
+    display: none;
+}
+.hgr-links {
+    text-align: center;
+    width: 100vw;
+}
+.hgr-links li {
+    display: -ms-inline-flex;
+    display: inline-block;
+    
+    letter-spacing: 1px;
+    padding: 0 15px;
+}
+@media screen and (max-width: 480px) {
+    .hgr-submenu {
+        text-align: right;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .hgr-submenu.active {
+        
+        background-color: rgba(255,255,255,1);
+    }
+    .hgr-menuBtn-mob {
+        display: inline-block;
+        position: relative;
+        margin-right: 10px; 
+    }
+    
+    .hgr-menuBtn-mob:before {
+        content: "MENU";
+        color: #f1635d;
+        position: absolute;
+        transform: translate(-180%, -3px);
+        font-size: 10px;
+    }
+    .hgr-submenu.active .hgr-menuBtn-mob:before {
+        content: "CLOSE";
+    }
+    .bar {
+        
+        background-color: #f1635d;
+        height: 2px;
+        width: 20px;
+        margin: 3px 0;
+        border-radius: 4px;
+        box-shadow: 0 -6px 0 #f1635d, 0 6px 0 #f1635d;
+        transform: rotate(0deg);
+        transition: box-shadow ease-out .3s, transform ease-in-out .3s;
+    }
+    .hgr-submenu .bar:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -170%;
+        background-color: transparent;
+        height: 2px;
+        width: 20px;
+        margin: 3px 0;
+        border-radius: 4px;
+        transform: rotate(-135deg); 
+        transition: transform .2s ease-in-out .1s;     
+        
+    }
+    .hgr-submenu.active .bar {
+        box-shadow: 0 0 0 transparent, 0 0 0 transparent;
+        transform: rotate(-135deg);
+    }
+    .hgr-submenu.active .bar:before {
+        background-color: #f1635d;
+        transform: rotate(-270deg);        
+    }
+    
+   
+    .hgr-links {
+        display: block;
+        height: 0;
+        overflow: hidden;
+        transition: height .5s;
+    }
+    .hgr-submenu.active .hgr-links {
+        height: calc(9em + 35px * 6 );
+    }
+    .hgr-links li {
+        display: block;
+        padding: 17.5px 0;
+    }
+    .hgr-submenu a { 
+        font-size: 21px;
+        
+    }
+}
+/* kv */
+.hgr-kv {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: linear-gradient(90deg, #faa386,#f98e89);
+    background-position: center top;
+    overflow: hidden;
+
+}
+.hgr-kv .kv-word {
+    position: absolute;
+    z-index: 2;
+    bottom: 3em;
+
+    text-align: center;
+    font-size: 18px;
+}
+.hgr-kv.kv-inner {
+    position: absolute;
+    top: 0;
+}
+.hgr-kv > img {
+    position: absolute;
+    width: 1920px;
+    height: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.hgr-kv.kv-inner > img {
+    top: 20px;
+}
+.mob-show {
+    display: none;
+}
+.pc-show {
+    display: initial;
+}
+.hgr-kv .mob-show {
+    width: 480px;
+    height: auto;
+}
+@media screen and (min-width: 769px){
+    .hgr-kv .kv-word {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 768px){
+    .hgr-kv .kv-word {
+        font-size: 21px;
+        margin: 0 13%;
+        line-height: 1.4em;
+        bottom: 2em;
+    }
+}
+@media screen and (max-width: 480px){
+    .pc-show {
+        display: none;
+    }
+    .hgr-kv {
+        height: 396px;
+        overflow: hidden;
+    }
+    .hgr-kv .kv-word {
+        bottom: 2.8em;
+        font-size: 16px;
+        margin: 0 13%;
+        line-height: 1.4em;
+        font-weight: 700;
+    }
+    .hgr-kv img { 
+        display: none
+    }
+    .mob-show { 
+        display: initial !important;
+    }
+}
+/* go 區塊 */
+.hgr-decoration {
+    position: relative;
+    top: calc( 2.9vw - 5px);
+    height: 40px;
+    background-image: url('../images/happyGoBurn/ilandy/pc_decoration_words.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.decoration-go {
+    position: absolute;
+    z-index: 1;
+    top: -50px;
+    left: 0;
+    left: 0;
+    right: 0;
+    width: 231px; 
+    height: 113px;
+    margin: auto;
+    background-image: url('../images/happyGoBurn/ilandy/go_btn.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    text-align: center;
+    cursor: pointer;
+}
+.decoration-go.movin {
+    animation: top-down-movin .9s infinite ease-in-out;    
+}
+.decoration-go > img {
+    width: 8%;
+    padding-top: 60px;
+}
+@keyframes top-down-movin {
+    0% {
+        top: -51px;
+    }
+    50% {
+        top: -47px;      
+    }
+    100% {
+        top: -51px;
+        
+    }
+}
+@media screen and (min-width: 1280px){
+    .hgr-decoration {
+        top: 31px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .hgr-decoration {
+        top: 0;
+        height: 25px;
+        margin-top: 20px; 
+        background-image: url('../images/happyGoBurn/ilandy/mob_decoration_words.png');
+        background-size: 320px auto;
+
+    }
+    .decoration-go {
+        top: -45px;
+        height: 77px;
+        width: 148.5px;
+    }
+    .decoration-go > img {
+        padding-top: 40px;
+    }
+}
+
+
+/** social **/
+.hgr-social {
+    width: 100%;
+    text-align: center;
+}
+.social {
+    display: inline-block;
+    margin-bottom: 30px;
+}
+.social .social-item {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    text-indent: -9999px;
+    background-size: 35px auto;
+    background-position: center 53%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.social .social-item.fb {
+    position: relative;
+    background-color: #3b5999;
+    background-image: url(../images/happyGoBurn/ilandy/fb.png);
+    margin-right: 30px;
+    
+}
+
+.social .social-item.fb:after {
+    content: "";
+    position: absolute;
+    right: -18px;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background-color: #999;
+}
+.social .social-item.line {
+    background-color: #04c303;
+    background-image: url(../images/happyGoBurn/ilandy/line.png);
+}
+.social .social-item>a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+@media screen and (max-width: 480px) {
+    .social .social-item { 
+        width: 35px;
+        height: 35px;
+        background-size: auto 70%;
+    }
+    .social .social-item.fb:after {
+        content: initial;
+    }
+    .social .social-item.fb {
+        margin-right: 15px;
+    }
+}
+
+/** game **/
+.hgr-game {
+    margin-left: 3%;
+    margin-right: 2.6%;
+    margin-bottom: 10px;
+    
+}
+.game{
+    max-width: calc(1200px - 12vw);
+    height: 50.8vw;
+    margin: 0 auto;
+    background-image: url(../images/happyGoBurn/ilandy/game_bg@2x.png); 
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    padding-left: 6vw;
+    padding-right: 6vw;
+    padding-top: calc(2.9vw + 2.8vw);
+
+}
+
+@media only screen and (min-width : 1280px) {
+    .hgr-game {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .game{
+        max-width: calc(1200px - 140px);
+        padding: 70px;
+        height: 570px;
+    }
+}
+@media only screen and (max-width : 768px) {
+    .hgr-game{
+        margin-top: -.85vw;
+    }
+}
+@media screen and (max-width: 768px) {
+    .hgr-game {
+        margin: 0;
+        margin-bottom: 14px;
+        padding-top: 12px;         
+        padding-bottom: 10px;
+        background-color: white;
+    }
+    .game{
+        position: relative;
+        width: 100%;
+        padding: 0;
+        height: initial;
+        padding-bottom: 12.5px;
+        border-bottom: 6px solid #fdea8b;
+        padding-top: 20px;
+        border-top: 6px solid #fdea8b;
+        background-image: none;
+    }
+    
+}
+.grid-container {
+    display: -ms-grid;
+    display: grid;
+    /*support ie firefox */
+    height: 100%;
+    -ms-grid-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+    /*not support ie */
+    grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
+    grid-template-rows: auto;
+    grid-template-areas: "a1 a2 a3 a4"
+                         "a10 aBtn aBtn a5"
+                         "a9 a8 a7 a6";
+}
+@media screen and (max-width: 1279px) {
+    .grid-container {
+        /*support ie firefox */
+        height: 86.5%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 0.333fr 0.333fr 0.333fr;
+        grid-template-areas: "a1 a2 a3"
+                            "a10 aBtn a4"
+                            "a9  aBtn a5"
+                            "a8  a7 a6";
+    }
+}
+  .grid-item {
+
+    position: relative;
+    z-index: 2;
+
+    box-sizing: border-box;
+    border: 4px solid white;
+    margin-left: -4px;
+    margin-top: -4px;
+    border-radius: 8px;
+    
+    
+    padding-top:69.5%;
+    width: 100%;
+
+    box-shadow: 0 9px 20px rgba(235, 132, 41, 0.3);
+    overflow: hidden;
+    background-color: white;
+
+    min-width: 0;
+    min-height: 0;
+  }
+  .grid-item.active:before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: -5%;
+      left: -5%;
+      width: 110%;
+      height: 110%;
+      background-color: rgba(0,0,0,.6);
+      
+  }
+  @media screen and (max-width: 768px) {
+      .grid-item {
+        height: 23vw;
+        border-width: 2px;
+        margin-top: -2px;
+        margin-left: 0;
+        box-shadow: 0 4.5px 10px rgba(235, 132, 41, 0.2);
+    
+      }
+      .grid-item:nth-child(1),
+      .grid-item:nth-child(2),
+      .grid-item:nth-child(3) {
+        margin-top: 0px;
+      }
+
+  }
+  .grid-item div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .award-01 {
+
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+    grid-area: a1;
+    z-index: 10;
+
+    /* for ie*/
+  }
+  .award-02 {
+    -ms-grid-column: 2;
+    -ms-grid-row: 1;
+    grid-area: a2;
+    z-index: 9;
+  }
+  .award-03 {
+    -ms-grid-column: 3;
+    -ms-grid-row: 1;
+    grid-area: a3;
+    z-index: 8;
+  }
+  .award-04 {
+    -ms-grid-column: 4;
+    -ms-grid-row: 1;
+    grid-area: a4;
+    z-index: 7;
+  }
+  .award-05 {
+    -ms-grid-column: 4;
+    -ms-grid-row: 2;
+    grid-area: a5;
+    z-index: 6;
+  }
+  .award-06 {
+    -ms-grid-column: 4;
+    -ms-grid-row: 3;
+    grid-area: a6;
+    z-index: 5;
+    
+  }
+  .award-07 {
+    -ms-grid-column: 3;
+    -ms-grid-row: 3;
+    grid-area: a7;
+    z-index: 4;
+  }
+  .award-08 {
+    -ms-grid-column: 2;
+    -ms-grid-row: 3;
+    grid-area: a8;
+    z-index: 3;
+  }
+  .award-09 {
+    -ms-grid-column: 1;
+    -ms-grid-row: 3;
+    grid-area: a9;
+    z-index: 2;
+  }
+  .award-10 {
+    -ms-grid-column: 1;
+    -ms-grid-row: 2;
+    grid-area: a10;
+    z-index: 1;
+  }
+  .award-btn {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    -ms-grid-row: 2;
+    grid-area: aBtn;
+    height: auto;
+    border: none;
+    background-color: #ebebeb;
+    z-index: 1;
+    padding-top: 35%;
+
+    cursor: pointer;
+
+    
+    
+  }
+  .award-btn > div {
+      width: calc(100% - 26px);
+      height: calc(100% - 20px);
+      margin: 14px 13px;
+      
+
+      background-image: url(../images/happyGoBurn/ilandy/start_btn.png);
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+    
+      text-indent: -9999px;
+      animation: attention .9s infinite;
+
+
+  }
+  .award-btn:hover > div,
+  .award-btn:focus > div {
+    animation: attention paused;
+    background-image: url(../images/happyGoBurn/ilandy/start_btn_click.png);    
+  }
+  @media screen and (max-width: 768px ){
+    .award-btn {
+        padding-top: 146.2%;
+    }
+    .award-btn > div {
+      background-image: url(../images/happyGoBurn/ilandy/start_btn_mob@2x.png);
+      margin-top: 18px;
+      animation: attention .9s infinite;      
+
+    }
+    .award-btn:hover > div,
+    .award-btn:focus > div {
+        animation: attention .9s infinite;
+      
+        background-image: url(../images/happyGoBurn/ilandy/start_btn_click_mob.png);
+    }
+  }
+
+  @media screen and (max-width: 480px ){
+    .award-btn > div {
+        animation: attention-more .9s infinite;      
+  
+      }
+  }
+  @keyframes attention {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.025, 1.025);        
+    }
+    100% {
+        transform: scale(1, 1);        
+    }
+  }
+  @keyframes attention-more {
+    0% {
+        transform: scale(1.1, 1.1);
+    }
+    50% {
+        transform: scale(1.15, 1.15);        
+    }
+    100% {
+        transform: scale(1.1, 1.1);        
+    }
+  }
+
+/** inner page **/
+.hgr-content.hgr-inner {
+    position: relative;
+    padding: 80px 0 40px 0;
+}
+.hgr-panel {
+    box-sizing: border-box;
+    position: relative;
+    z-index: 3;
+    width: 96%;
+    max-width: 1200px;
+    padding: 2.2vw 7.6vw 7.3vw 7.6vw;
+    margin: 0 2%;
+    
+    background-color: white;
+    box-shadow: 0 9px 30px rgba(0,0,0,.2);
+    border-radius: 10px;
+    
+}
+@media screen and (min-width: 1280px ){
+    .hgr-panel {
+        
+        margin: auto;
+        padding: 30px 104px 100px 104px;
+     }
+}
+@media screen and (max-width: 480px ){
+    .hgr-panel {
+        
+        margin: auto;
+        padding-bottom: 30px;
+     }
+}
+.hgr-panel:before,
+.hgr-panel:after {
+    content: "";
+    position: absolute;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.hgr-panel:before {
+    top: 50px;
+    right: 60px;
+    width: 106px;
+    height: 42px;
+    
+    background-image: url(../images/happyGoBurn/ilandy/panel-top-right.png);
+    
+}
+.hgr-panel:after {
+    bottom: 50px;
+    left: 50px;
+    width: 763px;
+    height: 42px;
+
+    background-image: url(../images/happyGoBurn/ilandy/panel-bottom-left.png);
+    
+}
+.panel .panel-title {
+    text-indent: -9999px;
+    height: 40px;
+    margin-bottom: 30px;
+    background-repeat: no-repeat; 
+    background-position: center;
+}
+.panel-title.award-list {
+    background-image: url(../images/happyGoBurn/ilandy/words/award-list.png);
+}
+.panel-title.infomation {
+    background-image: url(../images/happyGoBurn/ilandy/words/infomation.png);
+}
+.panel-title.award-people {
+    background-image: url(../images/happyGoBurn/ilandy/words/award-people.png);
+}
+.panel-title.aw-history {
+    background-size: auto 100%;
+    background-image: url(../images/happyGoBurn/ilandy/words/history.png);  
+}
+/** 活動辦法 **/
+.panel-info .panel-subtitle {
+    position: relative;
+    
+    padding-left: 38px;
+    margin-bottom: 10px;
+    color: #0097c1;
+    font-size: 18px;
+}
+.panel-info > .panel-subtitle:before {
+    content: "";
+    position: absolute;
+    left: 0%;
+    top: -12px;
+    width: 28px;
+    height: 28px;
+    background-image: url(../images/happyGoBurn/ilandy/subTitle.png);
+}
+.panel-info li,
+.panel-info p {
+    font-size: 15px;
+    line-height: 1.9rem;
+    letter-spacing: 1.5px;
+}
+.panel-info >p {
+    margin-left: 38px;
+    padding-bottom: 25px;
+}
+.panel-info > .panel-list {
+    margin-left: 55px;
+}.panel-list > li {
+    position: relative;
+    padding-bottom: 15px;
+}.panel-list > li:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: -15px;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background-color: #970535;
+}
+.panel-list .list-number {
+    list-style-type: decimal;
+    margin-left: 25px;
+}
+.panel-list .list-lower-latin {
+    margin-left: 20px;
+    list-style-type: lower-latin;
+}
+.panel-info .panel-slide-ctrl {
+    text-align: center;
+    cursor: pointer;
+}
+.hasSlideCtrl.slide-open .panel-slide-ctrl {
+    padding-bottom: 30px;
+}
+.hasSlideCtrl.slide-open {
+    padding-bottom: 0;
+}
+@media screen and (max-width: 768px ){ 
+    .hgr-panel:before {
+        top: 20px;
+        right: 20px;
+        width: 55px;
+        height: 20px;
+        background-size: auto 100%;
+        
+    }
+    .hgr-panel:after {
+        bottom: 20px;
+        left: 20px;
+        width: 250px;
+        height: 20px;
+        background-size: auto 100%;
+        background-image: url(../images/happyGoBurn/ilandy/panel-bottom-left-mob.png);
+    }
+}
+@media screen and (max-width: 480px ){ 
+    .hgr-panel {
+        padding-left: 10px; 
+        padding-right: 10px;
+    }
+    .hgr-panel:before {
+        top: 10px;
+        right: 10px;
+        width: 55px;
+        height: 20px;
+        background-size: auto 100%;
+        
+    }
+    .hgr-panel:after {
+        bottom: 10px;
+        left: 10px;
+        width: 250px;
+        height: 20px;
+        background-size: auto 100%;
+        background-image: url(../images/happyGoBurn/ilandy/panel-bottom-left-mob.png);
+        background-position: left bottom;
+    }
+    .panel-info p,
+    .panel-info li {
+        font-size: 14px;
+    }
+    .panel-info > .panel-list {
+        margin-left: 25px;
+    }
+    .panel-info p,
+    .panel-list .list-number {
+        margin-left: 10px;
+    }
+    .panel-info > .panel-subtitle {
+        font-size: 15px;
+        padding-left: 25px;
+    }
+    .panel-info > .panel-subtitle:before {
+        top: -5px;
+        width: 20px;
+        height: 20px;
+        background-size: 100%;
+        
+    }
+    .panel .panel-title {
+        margin-top: 14px;
+        height: 25px;
+        background-size: auto 100%;
+    }
+    
+}
+
+/** 獎品清單 **/
+.awards-item {
+    width: 32.3%;
+    margin: 0 .5% 25px;
+    float: left;
+}
+.awards-item.empty .awards-name {
+    background-color: #ebebeb;
+}
+
+.awards-item > .awards-img {
+    position: relative;
+    width: 100%;
+    padding-top: 66%;
+    background-color: #ebebeb;
+    border-radius: 10px;
+    background-image: url(../images/happyGoBurn/ilandy/award-item.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.awards-item.empty > .awards-img {
+    background-image: none;
+}
+.awards-item.empty .award-number {
+    display: none;
+}
+.awards-img .award-number {
+    position: absolute;
+    box-sizing: border-box;
+    left: 30px;
+    top: 0;
+    width: 47px;
+    height: 42px;
+    padding-top: 10px;
+    background-color: #0092ba;
+    color: white;
+    text-align: center;
+}
+.awards-img .award-number:after {
+    content: "";
+    position: absolute;
+    bottom:-12px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12px 23.5px 0 23.5px;
+    border-color: #0092ba transparent transparent transparent;
+}
+.awards-img > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 100%;
+    
+}
+.awards-item > .awards-name {
+    position: relative;
+    padding: 15px 0;
+    height: 1em;
+    min-height: 1em;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background-color: #f1635d;
+
+}
+.awards-name:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 3%;
+    width: 94%;
+    height: 10px;
+    background-size: 10px 10px;
+    background-repeat: repeat-x; 
+    background-image: radial-gradient(white 30%, transparent 0),
+                      radial-gradient(white 30%, transparent 0);
+    background-position:0 0 ,15px 15px;
+}
+@media screen and (max-width: 1024px) {
+    .awards-img > img {
+        height: 100%;
+    }
+    .awards-item > .awards-img{
+      background-size: 80%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .awards-item {
+        width: 49%;
+        margin-left: .5%;
+        margin-right: .5%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .hgr-panel.awardItems {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .awards-item {
+        
+        width: 98%;
+        margin: 1%;
+    }
+    .awards-item > .awards-img,
+    .awards-item > .awards-name {
+        border-radius: 4px;
+    }
+    .awards-item > .awards-img {
+        background-size: auto 75%;
+    }
+    .awards-item > .awards-img > img {
+        height: 100%;
+    }
+    .awards-name:before {
+        top: -2px;
+        background-size: 5px 5px;
+    }
+    .awards-img .award-number {
+        left: 10px;
+    }
+}
+
+/** 中獎清單 **/
+
+.panel-time {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.time-ctrl-left,
+.time-ctrl-right {
+    display: none;
+}
+.time-ctrl-left.final,
+.time-ctrl-right.final {
+    opacity: .2;
+}
+.time-selector {
+    width: 100%;
+    margin-bottom: 40px;
+}
+.time-selector > .time {
+    float: left;
+    box-sizing: border-box;
+    width: calc(25% - 20px);
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 50px;
+    
+    text-align: center;
+    color: #f1635d;
+    background-color: #ebebeb;
+    transition: background-color .2s ease-in;
+}
+
+.time.active,
+.time:hover {
+    background-color: #f1635d;
+    color: white;
+}
+.time:hover {
+    cursor: pointer;
+}
+.time.empty,
+.time.empty:hover {
+    cursor: initial;
+    background-color: #ebebeb;
+    color: white;
+    
+}
+.panel-people {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-bottom: #f1635d 1px solid;
+}
+.panel-people.hasSlideCtrl {
+    border-bottom: none;
+}
+
+.title-col {
+    width: 320px;
+}
+
+
+.awards-col {
+    padding: 16px 10px;
+    color: #666;
+}
+
+
+.title-col > .awards-col:first-child {
+    padding-top: 2em;
+    padding-left: 0;
+    width: 198px;
+    font-weight: 700;
+    line-height: 1.5em;
+}
+.title-col > .awards-col:last-child {
+    width: 76px;
+}
+.people-rows > .people-col {
+    padding-right: 0;
+    width: 100%;
+}
+.people-info {
+    width: 350px;
+}
+.people-rows-list:nth-child(even){
+    background-color: #ebebeb;
+}
+.people-info .awards-col:nth-child(2) {
+    width: 80px;
+}
+.people-rows-list > .people-email {
+    width: calc(100% - 200px);
+    word-break: break-word;
+}
+@media screen and (min-width: 769px){ 
+    .time-selector > .time.active,
+    .time-selector > .time {
+        font-size: 16px;
+    }
+    .title-col > .awards-col:first-child {
+        padding-top: 13px;
+    }
+    .title-col > .awards-col:last-child {
+        padding-top: 6px;
+    }
+}
+@media screen and (max-width: 1024px){
+    .people-rows {
+        display: block;
+    }
+}
+@media screen and (max-width: 768px){
+    footer .url {
+        display: none;
+    }
+    footer .copyright {
+        padding-top: 10px;
+    }
+    .panel-people {
+        border-bottom: none;
+    }
+    .people-rows {
+        display: block;
+    }
+    .title-col > .awards-col:first-child {
+        width: calc(90% - 50px)
+    }
+    
+    .title-col {
+        width: auto;
+    }
+    .time-selector > .time {
+        width: auto;
+        padding: 10px 20px;
+        margin-right: 5px;
+        margin-left: 0;
+        font-size: 14px;
+    }
+    .time-ctrl-left,
+    .time-ctrl-right {
+        display: block;
+        float: left;
+        width: 30px;
+        height: 35px;
+        background-size: auto 60%;
+        background-repeat: no-repeat;
+        background-position: center ;
+        text-indent: -9999px;
+    }
+    .time-ctrl-left {
+        background-image: url(../images/happyGoBurn/ilandy/ctrl-left.png);
+    }
+    .time-ctrl-right {
+        background-image: url(../images/happyGoBurn/ilandy/ctrl-right.png);
+    }
+    .time-ctrl-center {
+        width: calc(100% - 60px);
+        overflow: hidden;
+        float: left;
+        position: relative;
+        height: 35px;
+    }
+    .time-selector {
+        width: 9999px;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .time-selector > .time {
+        display: inline-block;
+        width: 500px;
+        min-width: initial;
+        box-sizing: border-box;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .awards-col {
+        padding-bottom: 10px;
+        padding-left: 10px;
+        
+    }
+    .title-col > .awards-col:nth-child(1) {
+        padding-left: 10px;
+    }
+    .title-col > .awards-col:nth-child(2) {
+        text-align: right;
+        padding-right: 0;
+    }
+    .people-rows-list > .people-email {
+        padding-top: 15px;
+        width: calc(100% - 240px);
+    }
+    .panel-people {
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .title-col > .awards-col:first-child {
+        padding-top: 25px;
+    }
+    .hgr-panel.award-people {
+        padding: 10px;
+        padding-bottom: 55px;
+    }
+    
+    .panel-people {
+        border: none;
+    }
+    .title-col {
+        border-bottom: 1px solid #ff8386;
+    }
+    .people-rows-list {
+        
+        display: block;
+    }
+    
+    .people-col {
+        width: 100%;
+    }
+    .people-rows {
+        display: block;
+    }
+    .title-col > .awards-col:last-child {
+        width: 60px;
+        padding-right: 0;
+    }
+    .people-rows-list > .people-email {
+        padding-top: 0px;
+        width: calc(100% - 20px);
+        
+    }
+    
+    
+    
+}
+
+/** 歷史紀錄 **/
+.history {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-bottom: 1px solid #ff8386;
+    color: #666;
+    font-size: 15px;
+    line-height: 1.5em;
+}
+
+.text-center {
+    text-align: center !important;
+}
+.text-right {
+    text-align: right !important;
+}
+.history-time > .time-col:first-child {
+    padding-top: 10px;    
+    width: 120px;
+}
+.history-time > .time-col:last-child {
+    padding-top: 5px;    
+    width: 65px;
+    text-align: center;
+}
+.history-time .time-col > .hightlight{
+    margin-left: 5px;
+}   
+.history .history-info {
+    padding-top: 10px;    
+    width: calc( 100% - 120px - 130px - 65px);
+}
+.history .history-name,
+.history  .history-discript { 
+    width: 50%;
+    padding-right: 10px;
+}
+
+
+.history .history-btn {
+    text-align: right;
+    width: 130px;
+}
+.history-btn .hightlight {
+    width: 110px;
+}
+.history-discript > .w75 {
+    word-break: break-all;
+}
+@media screen and (max-width: 768px) {
+    .history-time > .time-col:last-child {
+        text-align: right
+    }
+    .hgr-panel.award-history {
+        padding-top: 40px;  
+        padding-bottom: 50px;
+    }
+    .history .history-name {   
+        width: 200px;
+    }
+    .history .history-info {
+        display: block;
+    }
+    .history .history-discript,
+    .history .history-name {
+        width: 100%;     
+    }
+    
+}
+@media screen and (max-width: 480px) {
+    .history {
+        display: block;
+        padding-top: 0;
+    }
+    .hgr-panel.award-history { 
+        padding-top: 10px;
+    }
+    .history .history-info {
+        width: 100%; 
+    }
+    .history .history-name {
+        width: 100%;
+    }
+    .history-time > .time-col:first-child {
+        width: 50%;
+    }
+    .history-time > .time-col:last-child {
+        width: 50%;
+        text-align: right;
+    }
+    .history-time .time-col > .hightlight {
+        margin-left: 0;
+    }
+    .history-time > .time-col {
+        display: block;
+    }
+    .history .history-discript { 
+        width: 100%;
+        padding-bottom: 15px;
+    }
+    .history .history-btn {
+        width: 100%;
+        text-align: center;
+    }
+    .history-discript {
+        display: block;
+    }
+    .history-discript > .w75 {
+        width: 100% !important;
+    }
+}
+.history-more {
+    text-align: center;
+}
+
+/* Light box */
+.hgr-pop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 23;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.8);
+}
+.hgr-pop.open-pop {
+    display: block;
+}
+.point,
+.prize {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+.point {
+    width: 400px;
+}
+.point:before,
+.point:after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.point:before {
+    width: 55px;
+    height: 98px;
+    top: -10px;
+    left: -20px;
+    background-image: url('../images/happyGoBurn/ilandy/m-top-left.png');
+}
+.point:after {
+    width: 84px;
+    height: 74px;
+    right: -28px;
+    bottom: 0;
+    background-image: url('../images/happyGoBurn/ilandy/m-bottom-right.png');
+}
+.point-header {
+    position: relative;
+    padding-top: 12.5px;
+    padding-bottom: 12.5px;
+    border: #970535 6px solid;
+    border-radius: 20px 20px 0 0;
+    
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-align: center;
+    color: white;
+    
+    background-color: #970535;
+    
+}
+.point-header .close-pop {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    right: 10px;
+    cursor: pointer;
+}
+.point-header .close-pop:before,
+.point-header .close-pop:after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 0;
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #fff1bd;
+    border-radius: 2px;
+    
+}
+.point-header .close-pop:before {
+    transform: rotate(45deg);
+}
+.point-header .close-pop:after {
+    transform: rotate(-45deg);
+    
+}
+.point-body {
+    margin-top: -1px;
+    padding: 40px 80px 50px;
+    border: #970535 6px solid;
+    border-radius: 0 0 20px 20px;
+    background-color: #ebebeb;
+}
+.point-total {
+    background-color: white;
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.point-total .red-word {
+    font-size: 24px;
+    padding-bottom: 15px;
+}
+.point-body p {
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.prize {
+    width: 795px;
+    padding-top: 693px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../images/happyGoBurn/ilandy/getaward_bg.png);
+}
+.prize .prize-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 38%;
+    margin-left: 22.6%;
+    margin-right: 24%;
+    width: calc(100% - 22.6% - 24%);
+}
+.prize-content:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 56px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+    background-image: url(../images/happyGoBurn/ilandy/prize-name.png);
+}
+.prize .prize-name {
+    display : flex;
+    position: relative;
+    border-radius: 10px;
+    height: 120px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-align: center;
+    line-height: 1.3em;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    overflow: hidden;  
+}
+.prize-name:before,
+.prize-name:after  {
+    content: "";
+    position: absolute;
+    
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 42px;
+}
+.prize-name:before {
+    top: -2px;
+    right: -2px;
+    background-position: center right;
+    background-image: url(../images/happyGoBurn/ilandy/prize-right-top.png);    
+}
+.prize-name:after {
+    bottom: -2px;
+    left: -2px;
+    background-image: url(../images/happyGoBurn/ilandy/prize-left-bottom.png);    
+}
+.prize .prize-info {
+    margin-left: 30px;
+    margin-right: 30px;
+    line-height: 1.5em;
+}
+.prize-btn {
+    padding-top: 10px;
+}
+.prize-btn  > .hightlight {
+    font-size: 24px;
+    padding: 16px 76px;
+}
+
+@-moz-document url-prefix() { 
+    .prize .prize-content  {
+       margin-top: 45%;
+    }
+  }
+@media screen and (max-width: 480px) {
+    .point {
+        width: 300px;
+    }
+    .point:before {
+        width: 45px;
+        height: 78px;
+        top: -10px;
+        left: -10px;
+        background-size: auto 100%;
+    }
+    .point:after {
+        width: 64px;
+        height: 56.5px;
+        right: -10px;
+        bottom: -10px;
+        background-size: auto 100%;
+        
+    }
+    .point-header {
+        font-size: 15px;
+    }
+    .point-body {
+        padding: 40px 20px;
+    }
+    .prize {
+        width: 508.5px;
+        padding-top: 411.5px;
+        background-size: 100%;
+    }
+    .prize .prize-content {
+        margin-top: 32%;
+    }
+    .prize-content:before { 
+        height: 35px;
+        top: -25px;
+    }
+    .prize .prize-name {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        margin-bottom: 10px;
+        font-size: 21px;
+    }
+    .prize .prize-name:before,
+    .prize .prize-name:after {
+        height: 26.5px;
+    }
+    .prize .prize-info {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 10px;
+    }
+    .prize-btn  > .hightlight {
+        font-size: 18px;
+        padding: 10px 50px;
+    }
+    
+    
+}
+/* date slide */
+.panel-slide-ctrl {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 35px);
+    margin-left: 38px;
+    padding-bottom: 110px;
+    text-indent: -200%;
+    background-image: linear-gradient(0deg, white, white 50%, rgba(255,255,255,0)) /* color: transparent; */;
+}
+.panel-slide-ctrl::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 25px;
+    width: 100%;
+    height: 1px;
+    background-color: #f1635d;
+    
+}
+.panel-slide-ctrl::after {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: 10px;
+    left: calc(50% - 15px );
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: #f1635d;
+    background-image: url(../images/happyGoBurn/ilandy/arrow.png);
+    background-repeat: no-repeat;
+    background-position: 50% 54%;
+    background-size: 48% auto;
+    transition: transform .3s;
+    cursor: pointer;
+}
+.slide-open > .panel-slide-ctrl {
+    position: relative;
+    background-image: none;
+    padding-bottom: 50px;
+}
+.slide-open > .panel-slide-ctrl::after {
+    
+    transform: rotate(-180deg);   
+}
+.hasSlideCtrl {
+    position: relative;
+    max-height: 300px;
+    padding-top: 20px; 
+    padding-bottom: 30px; 
+    overflow: hidden;
+}
+.hasSlideCtrl.slide-open {
+    max-height: inherit;
+}
+@media screen and (max-width: 480px) { 
+    .panel-slide-ctrl { 
+        margin-left: 0;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 768px) { 
+    .panel-people { 
+        padding-top: 0;
+        padding-bottom: 10px;
+    }
+}
+
+/* utility */
+.blue-word {
+    color: #0097c1 !important;
+}
+.red-word {
+color: #970535 !important;
+}
+
+.word-link,
+.word-link:link,
+.word-link:visited {
+    color: #0093bc;
+}
+.word-link {
+    cursor: pointer;
+    text-decoration: underline;
+    /* border-bottom: 1px solid #0093bc; */
+    transition: color .3s, border-color .3s;
+}
+.word-link:hover {
+    color: #007c99;
+    /* border-color: #007c99; */
+}
+.hightlight {
+    display: inline-block;
+    padding: 10px 12.5px;
+    border-radius: 30px;
+    color: white !important;
+    text-align: center;
+    height: 1em;
+    font-size: 14px;
+    line-height: 1;
+}
+.hightlight.red {
+    background-color: #970535;
+} 
+.hightlight.blue {
+    background-color: #0092ba;
+}
+.hightlight.pink {
+    background-color: #f1635d;
+    cursor: pointer;
+}
+.hightlight.action-btn {
+    
+    position: relative;
+    z-index: 2;
+    background-color: #0092ba;
+    cursor: pointer;
+    overflow: hidden;
+}
+.hightlight.action-btn:after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #007c99;
+    transition: width .3s ease-in;
+}
+.hightlight.action-btn:hover:after {
+    left: 0%;
+    width: 100%;
+}
+.dark-gray {
+    color: #333;
+    font-weight: 700;
+}
+.light-gray {
+    color: #999;
+}
+.w100 {
+    width: 100%;
+}
+.w80 {
+    width: 80%;
+}
+.w75 {
+    width: 75%;
+}
+.w70 {
+    width: 70%;
+}
+.fz-15 {
+    font-size: 15px;
+}
+.fz-13 {
+    font-size: 13px;
+}
+.py-5 {
+    padding-top: 5px !important;
+    padding-bottom: 5px; 
+}
+.py-10 {
+    padding-top: 10px !important;
+    padding-bottom: 10px; 
+}
+.py-15 {
+    padding-top: 15px;
+    padding-bottom: 15px; 
+}
+.py-20 {
+    padding-top: 20px;
+    padding-bottom: 20px; 
+}
+.px-10 {
+    padding-left: 10px;
+    padding-right: 10px; 
+}
+.px-15 {
+    padding-left: 15px;
+    padding-right: 15px; 
+}
+.px-20 {
+    padding-left: 20px;
+    padding-right: 20px; 
+}
+.px-30 {
+    padding-left: 30px;
+    padding-right: 30px; 
+}
+.mx-0 {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+

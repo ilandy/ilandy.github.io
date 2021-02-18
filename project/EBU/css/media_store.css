@@ -1,0 +1,630 @@
+@charset "utf-8";
+/*-----------------------------------------------------------------------------
+[TABLE OF CONTENTS]
+    +media
+        + max-width : 1280px
+        + max-width : 1120px
+-----------------------------------------------------------------------------*/
+/* media 
+*----------------------------------------------------------------------------*/
+/**
+*
+* Desktops
+*
+**/
+@media only screen 
+and (max-width : 1280px) {
+    header .navbar .main .redBg { left: 140px;}
+    header .navbar .logo { width: 112px; left: 20px; height: 36px;}
+    header .navbar .unitComplex { left: 240px;}
+    header .navbar .toolsComplex { right: 10px;}    
+    footer .main { padding: 0 20px;}
+    footer .selectBox { top: 25px;}
+/* 20th 
+    header .navbar .main .redBg { left: 125px;}
+    header .navbar .unitComplex { left: 210px;}
+    header .navbar .logo { 
+    top: 14px; 
+    left: 10px; 
+    width: 140px; 
+    height: 35px;
+    }
+/* 20th end */
+}
+@media only screen 
+and (max-width : 1120px) {
+    #wrapper {
+        overflow: hidden;
+    }
+    header .topbar a {
+        padding: 0 20px;
+    }
+    header .memberbar a,
+    header .memberbar span,
+    header .memberbar .login {
+        font-size: 12px;
+    }
+    header .navbar .toolsComplex { top: 10px;}
+    header .navbar .toolsComplex a { margin: 0; font-size: 11px; padding: 28px 0 0;}    
+    header .navbar .toolsComplex a.qa { margin: 0 20px 0 5px;}
+    header .navbar .toolsComplex a.msgComplex,
+    header .navbar .toolsComplex a:hover.msgComplex,
+    header .navbar .toolsComplex a.qaComplex,
+    header .navbar .toolsComplex a:hover.qaComplex {
+    	background-size: 28px auto;
+    }
+    .searchrevampbox .searchbox .schtags input.schtext,
+    .searchrevampbox .selectboxit-container * {
+        font-size: 13px;
+    }
+    section article h2.mainHead { margin: 0 0 10px;}
+    footer { padding: 20px 20px;}
+    footer .selectBox { top: 0;}
+}
+@media only screen 
+and (max-width : 980px) {
+    header .navbar .toolsComplex a.msgComplex, 
+    header .navbar .toolsComplex a.qaComplex {
+        display: none;
+    }
+    header .navbar .toolsComplex {
+        top: 17px;
+    }
+    header .navbar .unitComplex {
+        left: 200px;
+        font-size: 18px;
+    }
+    header .navbar .main .redBg {
+        left: 130px;
+    }
+    header .navbar .main .redBg:after {
+        left: -10px;
+    }
+    header .memberbar a.msgComplex,
+    header .memberbar a.qaComplex { 
+        display: inline;
+        margin: 0 -8px 0 0;
+        padding: 2px 10px 2px 36px;
+    }
+    header .memberbar a.other {
+        padding: 0 20px;
+    }
+}
+@media only screen 
+and (max-width : 1120px) {
+    header .memberbar a,
+    header .memberbar a.msgComplex,
+    header .memberbar a.qaComplex,
+    header .memberbar a.retail {
+        font-weight: normal;
+    }
+    /*header .topbar,*/
+    header .navbar .toolsComplex,
+    header .memberbar .login,
+    header .memberbar .register,
+    header .memberbar .sitemap,
+    header .memberbar a.retail,
+    header .memberbar a.msgComplex,
+    header .memberbar a.qaComplex,
+    footer .monitor { display: none;}    
+    footer .mobile { display: block;}
+    header .memberbar a.other {
+        display: inline;
+    }
+    header .topbar {
+        float: right;
+    }
+    .backtop {
+        right: 5px;
+        bottom: 100px;
+    }
+    header .memberbar a.msgComplex,
+    header .memberbar a.qaComplex,
+    header .memberbar a.retail {
+        padding: 0 15px 0 36px;
+    }
+    header .memberbar a.retail {
+        border-right: 0;
+    }
+
+    
+    header .navbar .unitComplex {
+        top: 14px;
+        left: 140px;
+    }
+    header .navbar .redBg { height: 42px;}
+    header .navbar .main .redBg { left: 75px;height: 42px;}
+    header .navbar {
+        height: 42px;
+    }
+    header .navbar .main {
+        text-align: right;
+    }
+
+    header .navbar .logo {
+        top: 5px;
+        left: 10px;
+        width: 80px;
+        height: 29px;
+        z-index: 1;
+    }
+    header .navbar .redBg { left: 180px;}
+    header .navbar .main .redBg {
+        left: 55px;
+    }
+/*20th 
+    header .navbar .unitComplex {
+        left: 170px;
+    }
+    header .navbar .logo {
+        top: 6px;
+        left: 10px;
+        width: 110.5px;
+        height: 28px;
+    }
+    header .navbar .main .redBg {
+        left: 90px;
+    }
+/* 20th end */
+
+
+    header .navbar .navMobile {
+        position: relative;
+        float: right;
+        display: block;
+        z-index: 1;
+    }
+    header .navbar .navMobile a.FETnetComplex {
+        background: url(../images/mobile/btn_FETnet.png) no-repeat;
+    }
+    header .navbar .navMobile a.msgComplex {
+        background: url(../images/mobile/btn_msgComplex.gif) no-repeat;
+    }
+    header .navbar .navMobile a.qaComplex {
+        background: url(../images/mobile/btn_qaComplex.gif) no-repeat;
+    }
+    header .navbar .navMobile a.retail {
+        background: url(../images/mobile/btn_retail.jpg) no-repeat;
+    }
+    header .navbar .navMobile a.menuComplex {
+        background: url(../images/mobile/btn_menu.jpg) no-repeat;
+    }
+    header .navbar .navMobile a.FETnetComplex,
+    header .navbar .navMobile a.msgComplex,
+    header .navbar .navMobile a.qaComplex,
+    header .navbar .navMobile a.retail,
+    header .navbar .navMobile a.menuComplex {
+        float: left;
+        width: 42px;
+        height: 42px;
+        font-size: 0;
+    	background-size: 42px auto;
+    }
+    header .navbar .navMobile a.msgComplex {
+        width: 53px;
+        margin: 0 4px 0 0;
+    	background-size: 53px auto;
+    }
+    header .navbar .navMobile a.FETnetComplex,
+    header .navbar .navMobile a.msgComplex,
+    header .navbar .navMobile a.qaComplex,
+    header .navbar .navMobile a.retail {
+        display: none;
+    }
+    header .navbar .menuMobile {
+        display: block;
+    }
+	header .menuMobile {
+	    display: block;
+	}
+	
+    header .memberbar .login a,
+    header .memberbar .logout a {
+        padding: 0 0 0 37px;
+    }
+    .searchrevampbox .searchbox .schtags {
+	    float: none;
+	    height: 32px;
+	    position: absolute;
+	    width: auto;
+	    left: 0;
+	    right: 32px;
+	}
+	.searchrevampbox .searchbox .schtags input.schtext {
+        height: 32px;
+        line-height: 32px;
+    }
+    .searchrevampbox .searchbox input.schsubmit {
+        height: 32px;
+        width: 32px;
+    }
+    .searchrevampbox .selectboxit-container span {
+        height: 32px;
+        line-height: 32px;
+    }    
+	section {
+	    padding: 72px 0 0 0;
+	}
+    section.minSize,
+    section.maxSize { padding: 42px 0 0;}
+
+	article.toolMobile { display: block;}
+}
+/**
+*
+* iPads
+*
+**/
+@media only screen
+and (min-device-width : 768px) 
+and (max-device-width : 1120px) {
+    header .topbar {
+        position: relative;
+        top: -1px;
+        height: 18px;
+    }
+    header .topbar a {
+        padding: 0 23px;
+        height: 18px;
+        line-height: 18px;
+    }
+    header .main {
+        margin: 0 16px 0 16px;
+        max-width: 1248px;
+    }
+    header .memberbar {
+        height: 24px;
+    }
+    header .memberbar a {
+        top: 4px;
+        line-height: 16px;
+        padding: 0 10px;
+        vertical-align: middle;
+    }
+    header .memberbar a.other {
+        padding: 0 20px;
+        height: 12px;
+        line-height: 14px;
+    }
+    header .navbar .toolsComplex .toolsLink > a {
+        font-size: 12px;
+    }
+    header .memberbar .login a,
+    header .memberbar .logout a {
+        padding: 0 13px 0 27px;
+        line-height: 26px;
+        background: url(../images/icon/icon_member.png) no-repeat 11px 5px;
+        background-size: 13px auto;
+    }
+    header .memberbar .register a {
+        padding: 0 13px 0 13px;
+        line-height: 26px;
+    }
+    header .memberbar a.retail {
+        padding: 0 13px 0 25px;
+        background: url(../images/icon/icon_retail.png) no-repeat 9px 0;
+        background-size: 13px auto;
+    }
+    /* header .navbar {
+        height: 50px;
+    } */
+    header .navbar .redBg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 54%;
+        height: 42px;
+    }
+    header .navbar .logo {
+        position: absolute;
+        top: 9px;
+        left: 0;
+        width: 87px;
+        height: 31px;
+    }
+/* 20th 
+    header .navbar .logo { 
+        top: 10px;
+        width: 120px; 
+        height: 30px;
+    }
+    header .navbar .redBg { 
+        left: 43%;
+    }
+/* 20th end */
+    header .navbar .main .redBg { left: 82px;}
+    header .navbar .unitComplex {
+        top: 18px; left: 170px;
+    }
+    header .navbar .toolsComplex {
+        top: 5px;
+        right: 0;
+    }
+    header .navbar .toolsComplex .toolsLink > a {
+        margin: 0 4px 0 0;
+        padding: 0 8px 0 0;
+    }
+    header .navbar .search {
+        /*width: 166px;*/
+        zoom: .77;
+    }
+    header .navbar .toolsComplex > a {
+        padding: 30px 0 0;
+        zoom: .86;
+        font-size: .7em;
+    }
+    header .navbar .toolsComplex a.qaComplex { 
+        margin: 0 18px 0 3px;
+    }
+
+    header.minSize { top: -24px;}
+    header.maxSize { top: -24px;}
+
+    header .topbar a {
+        font-size: 10px;
+    }
+    header .memberbar a, 
+    header .memberbar span, 
+    header .memberbar .login {
+        font-size: 11px;
+    }
+    /*
+    header .memberbar .login a {
+        line-height: 36px;
+    }
+    */
+    header .navbar .redBg {
+        left: 52%;
+    }
+    header .navbar .toolsComplex a.msgComplex,
+    header .navbar .toolsComplex a:hover.msgComplex,
+    header .navbar .toolsComplex a.qaComplex,
+    header .navbar .toolsComplex a:hover.qaComplex {
+        background-size: 32px auto;
+    }
+    .searchrevampbox .searchbox .schtags input.schtext, 
+    .searchrevampbox .selectboxit-container * {
+        font-size: 10px;
+    }
+    section { padding: 66px 0 0;}
+    section.minSize,
+    section.maxSize { padding: 42px 0 0;}
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1120px) 
+and (orientation : portrait) {
+    header .topbar {
+        top: 0;
+        height: 14px;
+    }
+    header .topbar a {
+        padding: 0 16px;
+        height: 14px;
+        line-height: 14px;
+        font-size: 8px;
+    }
+    header .main {
+        margin: 0 12px 0 12px;
+        max-width: 1256px;
+    }
+    header .memberbar a {
+        top: 0px;
+        line-height: 12px;
+        padding: 0 10px 0 6px;
+        vertical-align: middle;
+    }
+    header .memberbar a.other {
+        padding: 0 10px;
+        height: 10px;
+        line-height: 10px;
+    }
+    header .memberbar {
+        height: 17px;
+    }
+    header .memberbar .login a,
+    header .memberbar .logout a {
+        padding: 0 9px 0 23px;
+        line-height: 18px;
+        background: url(../images/icon/icon_member.png) no-repeat 10px 3px;
+        background-size: 10px auto;
+    }
+    header .memberbar .register a {
+        padding: 0 9px 0 9px;
+        line-height: 18px;
+    }
+    header .memberbar a.retail {
+        background: url(../images/icon/icon_retail.png) no-repeat 7px 1px;
+    }
+    header .memberbar a.msgComplex       { 
+        background: url(../images/icon/icon_msg_s.png) no-repeat 7px 0;
+    }
+    header .memberbar a.qaComplex        { 
+        background: url(../images/icon/icon_qa_s.png) no-repeat 7px 0;
+    }
+    header .memberbar a.retail,
+    header .memberbar a.msgComplex,
+    header .memberbar a.qaComplex { 
+        padding: 0 9px 0 19px;
+        background-size: 10px auto;
+    }
+    header .memberbar a.retail { 
+        padding: 0 9px 0 26px;
+        background-position: 14px 1px;
+    }
+    header .memberbar a.qaComplex { 
+        padding: 0 9px 0 24px;
+        background-position: 12px 0;
+    }
+    header .memberbar a, 
+    header .memberbar span, 
+    header .memberbar .login {
+        font-size: 8px;
+    }
+    header .navbar {
+        /*ebu */
+        /* height: 37px; */
+        height: 42px;
+        /* ebu end */
+    }
+    header .navbar .redBg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 49%;
+        /*ebu */
+        /* height: 37px; */
+        height: 42px;
+        /* ebu end */
+    }
+    header .navbar .logo {
+        position: absolute;
+        top: 7px;
+        left: 0;
+        width: 65px;
+        height: 23px;
+        z-index: 1;
+    }
+/* 20th 
+    header .navbar .logo { 
+        top: 7px; 
+        left: 8px; 
+        width: 95px; 
+        height: 24px;
+    }
+/* 20th end */
+    header .navbar .toolsComplex .toolsLink > a {
+        margin: 0 4px 0 0;
+        padding: 0 8px 0 0;
+    }
+    header .navbar .toolsComplex .toolsLink > a.myCenterComplex {
+        margin: 0 4px 0 0;
+        padding: 0 8px 0 9px;
+    }
+
+    header .navbar .toolsComplex {
+        top: 12px;
+        right: 0;
+    }
+    header .navbar .search {
+        /*width: 166px;*/
+        zoom: .58;
+        position: relative;
+        top: -3px;
+    }
+    header .navbar .toolsComplex > a {
+        padding: 28px 0 0;
+        zoom: .66;
+        font-size: .68em;
+    }
+    header .navbar .toolsComplex a.qaComplex { 
+        margin: 0 18px 0 7px;
+    }
+    header.minSize,
+    header.maxSize {
+        top: -17px;
+    }
+    section { padding: 54px 0 0;}
+    section.minSize,
+    section.maxSize { padding: 37px 0 0;}
+
+    .searchrevampbox .searchbox .schtags input.schtext {
+        font-size: 7.5px !important;
+    }
+
+    .searchrevampbox .searchbox .schtags {
+        width: 172px;
+    }
+    header .navbar .toolsComplex .toolsLink {
+        margin: -5px 10px 0 0;
+    }
+    header .navbar .toolsComplex .toolsLink > a {
+        font-size: 9px;
+    }
+    header .navbar .main .redBg {
+        left: 40px;
+    }
+/* 20th 
+    header .navbar .main .redBg {
+        left: 70px;
+    }    
+/* 20th end */
+    header .navbar .unitComplex {
+        top: 11px;
+        font-size: 12px;
+        left: 130px;
+/* 20th 
+        left: 150px;
+/* 20th end */
+    }
+
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1120px) 
+and (orientation : landscape) {
+    /*header .navbar .toolsComplex {
+        top: 9px;
+    }
+    header .navbar .toolsComplex .toolsLink > a {
+        font-size: 14px;
+    }*/
+}
+/**
+*
+* iPhones 
+*
+**/
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 767px) {
+    section {
+        padding: 72px 0 0 0;
+    }
+    section.minSize,
+    section.maxSize { padding: 42px 0 0;}
+/* 20th 
+    header .navbar .logo { 
+        top: 6px; 
+        width: 110.5px; 
+        height: 28px;
+    }
+    header .navbar .redBg { left: 180px;}
+    header .navbar .main .redBg {
+        left: 90px;
+    }
+    header .navbar .unitComplex{
+        left: 170px;
+    }
+    header .memberbar a.retail {
+        border-right: 0;
+    }
+    header .memberbar a.msgComplex  {  background-position: 15px -1px; }
+    header .memberbar a.qaComplex   {  background-position: 15px -1px; }
+    header .memberbar a.other {
+        padding: 0 15px;
+    }
+/* 20th end */
+}
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 767px) 
+and (orientation : portrait) {
+
+}
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 767px) 
+and (orientation : landscape) {
+
+}
+/**
+*
+* ratio: 1.5
+*
+**/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	   only screen and (min--moz-device-pixel-ratio: 1.5),
+	   only screen and (min-device-pixel-ratio: 1.5){
+}
+

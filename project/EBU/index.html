@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=750, user-scalable=1">
+<meta name="keywords" content=''>
+<meta name="description" content=''>
+<title>2018 遠傳EBU活動 Demo Site</title>
+<!--============================== css start ==============================-->
+<!--============================== css close ==============================-->
+<!--============================== script start ==============================-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+<script>
+$(document).ready(function(){
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 200) {
+			$('.backtop').fadeIn();
+		} else {
+			$('.backtop').fadeOut();
+		}
+	});
+	$('.backtop').click(function () {
+		$('body,html').animate({
+			scrollTop: 0
+		}, 800);
+		return false;
+	});
+	$('a').attr('target','_blank');
+
+	var msg = "<div class='done'>v</div>"
+	$.each($('tr a'),function(i,link){
+		
+		if ($(this).attr('href') !== "###" ) {
+			$(this).parent('td').prev('td').html(msg);
+		}
+	});
+	
+});
+</script>
+<script type="text/javascript">
+var width = screen.width; 
+var meta = document.createElement("meta");
+var head = document.getElementsByTagName("head")[0];
+if (width >= 1024) {  
+    meta.setAttribute("name", "viewport");
+    meta.setAttribute("content", "width=1024");
+    head.appendChild(meta);
+} else if (width < 1024 && width >= 768) { // iPad in portrait mode
+    meta.setAttribute("name", "viewport");
+    meta.setAttribute("content", "width=960");
+    head.appendChild(meta);
+} else if (width <767) { // anything smaller than 700px in width 
+    meta.setAttribute("name", "viewport");
+    meta.setAttribute("content", "width=640; maximum-scale=1");
+    head.appendChild(meta);
+};
+</script>
+<!--============================== script close ==============================-->
+<style type="text/css">
+* { margin: 0; padding: 0; border: 0;}
+a { color: #f00;}
+body { background: #f2d3d3; font-family: Arial, Helvetica, sans-serif; letter-spacing: -0.4px; }
+h2, .backtop a { color: #fff;}
+h2 {
+    width: 100%;
+	line-height: 2em; 
+	text-align: center;
+    background: #de0700;
+}
+.backtop {text-align: center; padding: 5px 0;}
+.list {}
+.list table {
+    width: 100%;
+    border-collapse: collapse; 
+    border-spacing: 0;
+    color: #222;
+    font-size: 13px;
+    line-height: 2em; 
+    background: #fff;
+}
+.list table th {
+    padding: 2px 0;
+    color: #fff;
+    font-weight: normal;
+    border: 1px #ddd solid;
+    /*border-right: 2px #aaa solid;*/
+    background: #666;
+}
+.list table td {
+    padding: 2px 8px;
+    border: 1px #ddd solid;
+}
+.list table tr.even {
+    background: #f4e6e6;
+}
+.list table tr.odd {
+    background: #f8f1e5;
+}
+.list table .blue {
+    background: #daeef3;
+}
+.list table .green {
+    background: #ebf1de;
+}
+.list table .center {
+    text-align: center;
+}
+.list table .line {
+    border-bottom: 3px #888 solid;
+}
+/*
+.list table tr:hover {
+    color: #000;
+    background: #ffeec2;
+}
+*/
+.list table tbody.WebService {
+    background: #f2f2f2;
+}
+.newAdd {
+    color: #6633cc;
+}
+.done {
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	color: white;
+	text-align: center;
+	line-height: 20px;
+	background-color: rgb(153, 212, 26);
+}
+</style>
+</head>
+<body>
+<div class="list">
+	<!--============================== header start ==============================-->
+	<h2>&nbsp;2018 遠傳EBU Demo Site</h2>
+	<table class="list">
+		
+		<tr>
+			<th class="" width="5%">01</th>
+			<td width="20%">EBU首頁</td>
+			<td width="5%"></td>
+			<td><a target="_blank" href="./ebu_index.html">EBU首頁</a></td>
+			<td width="40%">&nbsp;</td>
+		</tr>
+		<tr>
+			<th >02</th>
+			<td >產品</td>
+			<td width="5%"></td>			
+			<td><a target="_blank" href="./product.html">產品介紹/產品特色/常見問題/最新優惠</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		
+		<tr>
+			<th rowspan="2" class="">03</th>
+			<td rowspan="2" >成功案例</td>
+			<td width="5%"></td>
+			<td><a target="_blank" href="./successCase.html">成功案例列表</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="5%"></td>
+			<td><a target="_blank" href="./successExample.html">成功案例內容</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<th rowspan="5" class="">04</th>
+			<td rowspan="5" >客戶專區</td>
+			<td width="5%"></td>
+			<td><a target="_blank" href="./customerService.html">服務異動平台</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="5%"></td>
+			<td><a target="_blank" href="./faq.html">常見問題</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="5%"></td>
+			<td><a target="_blank" href="./joinForm.html">線上問題與反應</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="5%"></td>
+			<td><a target="_blank" href="./planMission.html">方案申請書</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="5%"></td>
+			<td><a target="_blank" href="./productMission.html">產品申請書</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<th rowspan="2" class="">05</th>
+			<td rowspan="2" >關於我們＆其他</td>
+			<td width="5%"></td>
+			<td><a target="_blank" href="./aboutUs.html">遠傳企業服務</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="5%"></td>
+			<td><a target="_blank" href="./siteMap.html">網站地圖</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<th class="">06</th>
+			<td >資通整合</td>
+			<td width="5%"></td>
+			<td><a target="_blank" href="./newsLetter.html">電子報列表</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<th rowspan="2" class="">07</th>
+			<td rowspan="2" >優惠與活動</td>
+			<td width="5%"></td>
+			<td><a target="_blank" href="./specialActivities.html">優惠與活動</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="5%"></td>
+			<td><a target="_blank" href="./special-act-article.html">優惠與活動內容</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<th rowspan="4" class="">08</th>
+			<td rowspan="4" >客戶專區</td>
+			<td width="5%"></td>
+			<td><a target="_blank" href="./news-notice.html">最新訊息</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="5%"></td>
+			<td><a target="_blank" href="./news-notice-article.html">最新訊息-內容</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="5%"></td>
+			<td><a target="_blank" href="./service-notice.html">服務公告</a></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="5%"></td>
+			<td><a target="_blank" href="./service-notice-article.html">服務公告-內容</a></td>
+			<td>&nbsp;</td>
+		</tr>
+	</table>
+	<!--============================== content close ==============================-->
+  <div class="backtop" style="text-align: center;"><a href="#top">Back to Top</a></div>
+</div>
+
+</body>
+</html>
