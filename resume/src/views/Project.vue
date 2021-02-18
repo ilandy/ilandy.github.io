@@ -78,7 +78,7 @@
       <article>
         <h2 class="color-secendary">嘉義市政府線上陳情系統</h2>
         URL:
-        <a href="http://callcenter.chiayi.go">http://callcenter.chiayi.gov.tw</a
+        <a href="https://callcenter.chiayi.gov.tw/#/index">https://callcenter.chiayi.gov.tw/#/index</a
         ><br />
         Jobs: Design, Design to RWD Web, Getting and sending data form Web
         API<br />
