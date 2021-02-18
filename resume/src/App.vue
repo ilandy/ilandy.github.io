@@ -106,7 +106,6 @@ a {
   -moz-osx-font-smoothing: grayscale;
   color: #ccc;
   background-color: #1c1c1c;
-  min-height: 100vh;
 }
 
 #nav {
