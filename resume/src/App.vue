@@ -58,14 +58,11 @@ export default {
   },
   methods: {
     pageScroll() {
-      // console.log(this.$refs.divAsTarget)
-
-      // console.log(this.$refs.wrap.scrollTop)
+     console.log(123)
       this.getRefPosition();
     },
     getRefPosition() {
-      // console.log(this.$refs.wrap.scrollTop)
-
+     
       if (this.$refs.wrap.scrollTop > this.$refs.divAsTarget.offsetTop) {
         this.isActive = true;
         return;
@@ -81,10 +78,10 @@ body,
 html {
   padding: 0;
   margin: 0;
-  background-color: #222;
+  background-color: #1c1c1c;
 }
 .wrap {
-  height: 85.5vh;
+  height: 90vh;
   overflow: auto;
   h1.name {
     padding-top: 0.85em;
