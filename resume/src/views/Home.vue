@@ -52,5 +52,7 @@ b {
 .color-primary {
   padding-top: 20px;
 }
-
+.home {
+  padding-bottom: 30px;
+}
 </style>

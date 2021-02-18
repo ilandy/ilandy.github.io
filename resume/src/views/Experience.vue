@@ -8,9 +8,7 @@
         Period: 2018.2 - present<br />
         Position: Front end Designer<br />
         Daily Jobs:<br />
-        VI Design, Web Design, Design to Web, Web interactive design, Getting
-        date form Web API ,<br />
-        Project Manager, Project Planning, Team communication
+        UI Design, Design to Web, Web interactive design, Campaign Site, Maintain source code and fixed issues <br />
       </article>
       <article>
         <h3 class="color-secendary">大心數位股份有限公司</h3>
@@ -88,5 +86,8 @@ export default {
 .color-secendary,
 .color-primary {
   padding-top: 20px;
+}
+.about {
+  padding-bottom: 30px;
 }
 </style>
