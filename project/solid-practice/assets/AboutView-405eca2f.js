@@ -1,0 +1,1 @@
+import{_ as t,o,c as _,a as e}from"./index-166a6f08.js";const s={},c={class:"about"},n=e("div",null,[e("h1",null,"SOLID Principle"),e("p",null,"精神時光屋")],-1),a=[n];function l(i,r){return o(),_("div",c,a)}const d=t(s,[["render",l]]);export{d as default};
